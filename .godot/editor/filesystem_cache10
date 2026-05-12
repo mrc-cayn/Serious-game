@@ -1,0 +1,86 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1778567174
+default_bus_layout.tres::AudioBusLayout::3130753457985299323::1778566174::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::3627442386444001360::1766645223::1778163030::1::::<><><>0<>0<>0b7aef923c884ef7da231dea8cabc960<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main.tscn::PackedScene::6068701409089449674::1778566883::0::1::::<><><>0<>0<><>::
+::res://addons/::1778232583
+::res://addons/alo transition/::1778232583
+README.md::TextFile::-1::1766645223::0::1::::<><><>0<>0<><>::
+transition.gdshader::Shader::7417689770789090886::1766645223::0::1::::<><><>0<>0<><>::
+::res://addons/alo transition/assets/::1778232583
+day.jpg::CompressedTexture2D::2501125992044587007::1766645223::1778163030::1::::<><><>0<>0<>1ab9e69b980ead87b75a1ff644fe8c15<>res://.godot/imported/day.jpg-877f2cb082eeb472638e52a88f0846ad.ctex::
+icon.svg::CompressedTexture2D::2868508020531340664::1766645223::1778163030::1::::<><><>0<>0<>b1d81b6fda442e522aeffaabddda2501<>res://.godot/imported/icon.svg-4fdf55a3dafc55ac5e372a3b955af4cf.ctex::
+mask.png::CompressedTexture2D::5418304224991221902::1766645223::1778163030::1::::<><><>0<>0<>6a7460721a820b309cb4ccc3c8d6a711<>res://.godot/imported/mask.png-7cf9be6e7d27b21c25683c85443a4cf1.ctex::
+night.jpg::CompressedTexture2D::8498022081212165343::1766645223::1778163030::1::::<><><>0<>0<>40422ef99454cf19dae7321665b6b37f<>res://.godot/imported/night.jpg-c3e441ff51bbb3eb3dce9dccff6bbc2a.ctex::
+::res://addons/alo transition/meta/::1778232583
+asset-lib-icon.png::CompressedTexture2D::1868519590297445871::1766645223::1778163030::1::::<><><>0<>0<>3860e14259855f24eb14dcaa7b2d317b<>res://.godot/imported/asset-lib-icon.png-e1bd9d0ee874e198632f6c7e36e83314.ctex::
+::res://addons/animated shape/::1778232583
+::res://addons/animated shape/addons/::1778232583
+::res://addons/animated shape/addons/goutte.animated_shape_2d/::1778232583
+animated_shape_2d.gd::GDScript::6965713385012403203::1766645223::0::1::::AnimatedShape2D<>Node<><>0<>1<><>::
+animated_shape_2d.svg::CompressedTexture2D::6477451630523980476::1766645223::1778163030::1::::<><><>0<>0<>d8fcf24bc75b68d374a70b8d1e8fbb58<>res://.godot/imported/animated_shape_2d.svg-553e53ce92f97b853f74c3df5bf1775e.ctex::
+plugin.cfg::TextFile::-1::1766645223::0::1::::<><><>0<>0<><>::
+plugin.gd::GDScript::7416521953339836764::1766645223::0::1::::<>EditorPlugin<><>0<>1<><>::
+README.md::TextFile::-1::1766645223::0::1::::<><><>0<>0<><>::
+shape_frames_2d.gd::GDScript::2363588590380040465::1766645223::0::1::::ShapeFrames2D<>Resource<><>0<>1<><>::
+shape_frame_2d.gd::GDScript::5711191959897446265::1766645223::0::1::::ShapeFrame2D<>Resource<><>0<>1<><>::
+::res://addons/animated shape/addons/goutte.animated_shape_2d/editor/::1778232583
+linked_frames_feedback.gd::GDScript::3393419272631155317::1766645223::0::1::::<>Node<><>0<>1<><>::
+shape_frames_bottom_panel_control.gd::GDScript::7703493725911786780::1766645223::0::1::::ShapeFramesBottomPanelControl<>Control<><>0<>1<><>::
+shape_frames_bottom_panel_control.tscn::PackedScene::367234367683142238::1766645223::0::1::::<><><>0<>0<><>::res://addons/goutte.animated_shape_2d/editor/shape_frames_bottom_panel_control.gd<>res://addons/goutte.animated_shape_2d/editor/linked_frames_feedback.gd<>uid://cwgak166wa6hw::::res://addons/animated shape/addons/goutte.animated_shape_2d/editor/icons/zoom_less.png<>uid://b64sqrouwimqs::::res://addons/animated shape/addons/goutte.animated_shape_2d/editor/icons/zoom_more.png<>uid://2vmlyocy0aeu::::res://addons/animated shape/addons/goutte.animated_shape_2d/editor/icons/zoom_reset.png<>uid://btv6bx8bipqrm::::res://addons/animated shape/addons/goutte.animated_shape_2d/editor/icons/shift_left.png<>uid://q30fj4bowepc::::res://addons/animated shape/addons/goutte.animated_shape_2d/editor/icons/shift_right.png
+shape_frame_editor.gd::GDScript::7049308746418113106::1766645223::0::1::::ShapeFrameEditor<>Control<><>0<>1<><>::
+shape_frame_editor.tscn::PackedScene::6959214340308200330::1766645223::0::1::::<><><>0<>0<><>::res://addons/goutte.animated_shape_2d/editor/shape_frame_editor.gd<>uid://chl5rhpr6ngqp::::res://addons/animated shape/addons/goutte.animated_shape_2d/editor/icons/link.png<>uid://hsf5o8ys0vo3::::res://addons/animated shape/addons/goutte.animated_shape_2d/editor/icons/remove.png<>uid://cbgoa2ilmautt::::res://addons/animated shape/addons/goutte.animated_shape_2d/editor/icons/new.png<>uid://085a76nwyjqf::::res://addons/animated shape/addons/goutte.animated_shape_2d/editor/icons/copy.png<>uid://be0cxufi44ytn::::res://addons/animated shape/addons/goutte.animated_shape_2d/editor/icons/edit.png<>uid://c5mpguq347mtg::::res://addons/animated shape/addons/goutte.animated_shape_2d/editor/icons/paste.png
+shape_preview.gd::GDScript::3296199412821170988::1766645223::0::1::::<>CollisionShape2D<><>0<>1<><>::
+::res://addons/animated shape/addons/goutte.animated_shape_2d/editor/icons/::1778232583
+copy.png::CompressedTexture2D::1824668795874931785::1766645223::1778163030::1::::<><><>0<>0<>46c4f8bc6b6d0e67f890133794d352a6<>res://.godot/imported/copy.png-0c4f23215c8def0a69face154ac5d767.ctex::
+edit.png::CompressedTexture2D::2718949067936500843::1766645223::1778163030::1::::<><><>0<>0<>63479fc1f744bb2ee9e6f2846aee1753<>res://.godot/imported/edit.png-44e589164215302c6ca8cc482b27d59c.ctex::
+link.png::CompressedTexture2D::5288723688076327807::1766645223::1778163030::1::::<><><>0<>0<>4bfd5b86b06bccbdd8274c7577bf88a6<>res://.godot/imported/link.png-8d1882c4596de3a82c169c6aef130e30.ctex::
+new.png::CompressedTexture2D::4856267946452062345::1766645223::1778163030::1::::<><><>0<>0<>767d0a8c78d3cfff9c0446850aedf9c4<>res://.godot/imported/new.png-e09e5b281b63d334e3c16bcdb1b5fd47.ctex::
+paste.png::CompressedTexture2D::6904201755726908684::1766645223::1778163030::1::::<><><>0<>0<>79341fa670126ef4c4db1fd8f3abccec<>res://.godot/imported/paste.png-0ac2205d1b7f4da955a8bae84a0b2355.ctex::
+remove.png::CompressedTexture2D::528838651241241204::1766645223::1778163030::1::::<><><>0<>0<>fcaca7d3c3adb0afe6299dd0c26d6f94<>res://.godot/imported/remove.png-61f4e21362a3b986470167c1f72e326c.ctex::
+shift_left.png::CompressedTexture2D::3765245917292970726::1766645223::1778163030::1::::<><><>0<>0<>6de8261ddc432d9cd786010f809e68c9<>res://.godot/imported/shift_left.png-e0a8b83720ea774f3e7300ee548027a0.ctex::
+shift_right.png::CompressedTexture2D::1182351446685371264::1766645223::1778163030::1::::<><><>0<>0<>7beaf991fac3055afb0d2f8919ec6acd<>res://.godot/imported/shift_right.png-fccd224a51a60f30134a8cf860842134.ctex::
+zoom_less.png::CompressedTexture2D::6329401466820296448::1766645223::1778163030::1::::<><><>0<>0<>c79e8fe9bea5cbf4e745be6e1a8cf43d<>res://.godot/imported/zoom_less.png-b2ed7fe7400aa1fca07ed06d8e3d33e2.ctex::
+zoom_more.png::CompressedTexture2D::4623264185374764162::1766645223::1778163030::1::::<><><>0<>0<>81ff1a1305288cdad36a96546c971bae<>res://.godot/imported/zoom_more.png-3aa329fe6236e54d485a8182c667b27f.ctex::
+zoom_reset.png::CompressedTexture2D::1939200241019872036::1766645223::1778163030::1::::<><><>0<>0<>65f319b79b6f0c5706b6534b5bae1f35<>res://.godot/imported/zoom_reset.png-e4d6cb226cda77916e9cedee3a20e395.ctex::
+::res://assets/::1778562177
+::res://assets/audio/::1778561204
+::res://assets/audio/music/::1778561204
+::res://assets/audio/sfx/::1778561199
+::res://assets/sprites/::1778561188
+::res://extra/::1778232894
+::res://extra/Audio/::1778232861
+::res://extra/Audio/Music/::1778232861
+::res://extra/Audio/SFX/::1778232851
+::res://extra/Debug_sprites/::1778232877
+::res://extra/sprites/::1778232834
+::res://extra/Tilesets/::1778232894
+::res://globals/::1778567157
+global.gd::GDScript::2256337864555453983::1766645223::0::1::::<>Node<><>0<>0<><>::
+global.tscn::PackedScene::6127723141019870996::1778567157::0::1::::<><><>0<>0<><>::uid://7e8s4sx6nj3l::::res://globals/global.gd
+::res://managers/::1778567156
+::res://managers/Cheats/::1778567156
+::res://managers/Scene/::1778567105
+scene_manager.gd::GDScript::7155077192652625465::1778566757::0::1::::<>Node<><>0<>0<><>::
+scene_manager.tscn::PackedScene::3106269761289557739::1778567105::0::1::::<><><>0<>0<><>::uid://c868ct33l84an::::res://managers/Scene/scene_manager.gd<>uid://ddxgjcn15adry::::res://addons/alo transition/transition.gdshader<>uid://brxfpfyv6x8ae::::res://icon.svg
+::res://Resources/::1778562170
+::res://Resources/themes/::1778562163
+::res://Resources/tilesets/::1778562170
+::res://Scenes/::1778562242
+::res://Scenes/enimies/::1778561311
+::res://Scenes/enimies/audio/::1778561311
+::res://Scenes/enimies/scenes/::1778561311
+::res://Scenes/enimies/scripts/::1778561311
+::res://Scenes/enimies/sprites/::1778561311
+::res://Scenes/Menu's/::1778562255
+::res://Scenes/Menu's/Main_menu/::1778563399
+::res://Scenes/player/::1778561303
+::res://Scenes/player/audio/::1778561303
+::res://Scenes/player/scenes/::1778561303
+::res://Scenes/player/scripts/::1778561303
+::res://Scenes/player/sprites/::1778561303
+::res://Scenes/template/::1778561244
+::res://Scenes/template/audio/::1778561222
+::res://Scenes/template/scenes/::1778561244
+::res://Scenes/template/scripts/::1778561231
+::res://Scenes/template/sprites/::1778561216
