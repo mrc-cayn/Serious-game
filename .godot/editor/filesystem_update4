@@ -1,7 +1,1 @@
-res://main.tscn
-res://default_bus_layout.tres
-res://managers/Scene/change_scene.tscn
-res://managers/Scene/change_scene.gd
-res://managers/Scene/scene_manager.tscn
-res://globals/global.tscn
 res://managers/debug/debug.tscn
