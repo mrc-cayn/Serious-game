@@ -1,3 +1,54 @@
 [gd_scene format=3 uid="uid://ciljtrsva6c2k"]
 
+[ext_resource type="Script" uid="uid://cql26cfmdans7" path="res://managers/debug/debug.gd.gd" id="1_fuktp"]
+
 [node name="Debug" type="Node" unique_id=1089821785]
+script = ExtResource("1_fuktp")
+
+[node name="HUD" type="Node2D" parent="." unique_id=1600015489]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="HUD" unique_id=852130168]
+
+[node name="time_scale" type="HSlider" parent="HUD/CanvasLayer" unique_id=81964530]
+offset_left = 64.0
+offset_top = 160.0
+offset_right = 544.0
+offset_bottom = 224.0
+scale = Vector2(1.4268904, 1.4268904)
+max_value = 10.0
+step = 0.1
+value = 1.0
+allow_greater = true
+allow_lesser = true
+
+[node name="time_sale_text" type="Label" parent="HUD/CanvasLayer/time_scale" unique_id=1273145902]
+layout_mode = 0
+offset_top = -8.0
+offset_right = 480.0
+offset_bottom = 56.0
+scale = Vector2(0.3957276, 0.3957276)
+theme_override_font_sizes/font_size = 64
+text = "Time_scale=1"
+
+[node name="Debug_text" type="Label" parent="HUD/CanvasLayer" unique_id=570131619]
+offset_left = 32.0
+offset_top = -16.0
+offset_right = 432.0
+offset_bottom = 159.0
+theme_override_font_sizes/font_size = 128
+text = "Debug"
+
+[node name="Paused" type="CheckBox" parent="HUD/CanvasLayer" unique_id=549578646]
+offset_left = 64.0
+offset_top = 240.0
+offset_right = 149.0
+offset_bottom = 271.0
+scale = Vector2(1.0156953, 1.0156953)
+theme_override_font_sizes/font_size = 32
+theme_override_colors/checkbox_checked_color = Color(1, 1, 1, 1)
+text = "Paused
+"
+
+[connection signal="value_changed" from="HUD/CanvasLayer/time_scale" to="." method="_on_time_scale_value_changed"]
+[connection signal="toggled" from="HUD/CanvasLayer/Paused" to="." method="_on_paused_toggled"]
