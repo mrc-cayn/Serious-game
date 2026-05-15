@@ -1,6 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778766492
-default_bus_layout.tres::AudioBusLayout::3130753457985299323::1778566174::0::1::::<><><>0<>0<><>::
+::res://::1778854942
 icon.svg::CompressedTexture2D::3627442386444001360::1766645223::1778163030::1::::<><><>0<>0<>0b7aef923c884ef7da231dea8cabc960<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 main.tscn::PackedScene::6068701409089449674::1778566883::0::1::::<><><>0<>0<><>::
 ::res://addons/::1778232583
@@ -17,7 +16,7 @@ asset-lib-icon.png::CompressedTexture2D::1868519590297445871::1766645223::177816
 ::res://addons/animated shape/::1778232583
 ::res://addons/animated shape/addons/::1778232583
 ::res://addons/animated shape/addons/goutte.animated_shape_2d/::1778232583
-animated_shape_2d.gd::GDScript::6965713385012403203::1766645223::0::1::::AnimatedShape2D<>Node<>res://addons/animated shape/addons/goutte.animated_shape_2d/animated_shape_2d.svg<>0<>1<><>::
+animated_shape_2d.gd::GDScript::6965713385012403203::1766645223::0::1::::AnimatedShape2D<>Node<><>0<>1<><>::
 animated_shape_2d.svg::CompressedTexture2D::6477451630523980476::1766645223::1778163030::1::::<><><>0<>0<>d8fcf24bc75b68d374a70b8d1e8fbb58<>res://.godot/imported/animated_shape_2d.svg-553e53ce92f97b853f74c3df5bf1775e.ctex::
 plugin.cfg::TextFile::-1::1766645223::0::1::::<><><>0<>0<><>::
 plugin.gd::GDScript::7416521953339836764::1766645223::0::1::::<>EditorPlugin<><>0<>1<><>::
@@ -59,22 +58,24 @@ zoom_reset.png::CompressedTexture2D::1939200241019872036::1766645223::1778163030
 global.gd::GDScript::2256337864555453983::1766645223::0::1::::<>Node<><>0<>0<><>::
 global.tscn::PackedScene::6127723141019870996::1778567157::0::1::::<><><>0<>0<><>::uid://7e8s4sx6nj3l::::res://globals/global.gd
 ::res://managers/::1778567178
-::res://managers/debug/::1778568452
-debug.tscn::PackedScene::5357641576463007424::1778568452::0::1::::<><><>0<>0<><>::
-::res://managers/Scene/::1778567105
+::res://managers/debug/::1778767602
+debug.gd.gd::GDScript::5920265852625096232::1778767502::0::1::::<>Node<><>0<>0<><>::
+debug.tscn::PackedScene::5357641576463007424::1778767602::0::1::::<><><>0<>0<><>::uid://cql26cfmdans7::::res://managers/debug/debug.gd.gd
+::res://managers/Scene/::1778854844
 scene_manager.gd::GDScript::7155077192652625465::1778566757::0::1::::<>Node<><>0<>0<><>::
-scene_manager.tscn::PackedScene::3106269761289557739::1778567105::0::1::::<><><>0<>0<><>::uid://c868ct33l84an::::res://managers/Scene/scene_manager.gd<>uid://ddxgjcn15adry::::res://addons/alo transition/transition.gdshader<>uid://brxfpfyv6x8ae::::res://icon.svg
+scene_manager.tscn::PackedScene::3106269761289557739::1778854844::0::1::::<><><>0<>0<><>::uid://c868ct33l84an::::res://managers/Scene/scene_manager.gd<>uid://ddxgjcn15adry::::res://addons/alo transition/transition.gdshader<>uid://brxfpfyv6x8ae::::res://icon.svg
 ::res://Resources/::1778562170
 ::res://Resources/themes/::1778562163
 ::res://Resources/tilesets/::1778562170
-::res://Scenes/::1778562242
+::res://Scenes/::1778854911
 ::res://Scenes/enimies/::1778561311
 ::res://Scenes/enimies/audio/::1778561311
 ::res://Scenes/enimies/scenes/::1778561311
 ::res://Scenes/enimies/scripts/::1778561311
 ::res://Scenes/enimies/sprites/::1778561311
 ::res://Scenes/Menu's/::1778562255
-::res://Scenes/Menu's/Main_menu/::1778563399
+::res://Scenes/Menu's/Main_menu/::1778854875
+main_menu.tscn::PackedScene::6795794911471800477::1778854875::0::1::::<><><>0<>0<><>::
 ::res://Scenes/player/::1778561303
 ::res://Scenes/player/audio/::1778561303
 ::res://Scenes/player/scenes/::1778561303
@@ -85,3 +86,4 @@ scene_manager.tscn::PackedScene::3106269761289557739::1778567105::0::1::::<><><>
 ::res://Scenes/template/scenes/::1778561244
 ::res://Scenes/template/scripts/::1778561231
 ::res://Scenes/template/sprites/::1778561216
+::res://Scenes/UI/::1778854911
