@@ -1,7 +1,10 @@
+AudioStreamPlayer2D
+Node
+Button
+Control
 CheckBox
 Label
 HSlider
-Button
 Node2D
 CanvasLayer
 AnimationPlayer
