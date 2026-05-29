@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1780021291
+::res://::1780027442
 icon.svg::CompressedTexture2D::3627442386444001360::1766645223::1778163030::1::::<><><>0<>0<>0b7aef923c884ef7da231dea8cabc960<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 main.tscn::PackedScene::6068701409089449674::1779979470::0::1::::<><><>0<>0<><>::
 ::res://addons/::1780027295
@@ -16,7 +16,7 @@ asset-lib-icon.png::CompressedTexture2D::1868519590297445871::1766645223::177816
 ::res://addons/animated shape/::1778232583
 ::res://addons/animated shape/addons/::1778232583
 ::res://addons/animated shape/addons/goutte.animated_shape_2d/::1778232583
-animated_shape_2d.gd::GDScript::6965713385012403203::1766645223::0::1::::AnimatedShape2D<>Node<><>0<>1<><>::
+animated_shape_2d.gd::GDScript::6965713385012403203::1766645223::0::1::::AnimatedShape2D<>Node<>res://addons/animated shape/addons/goutte.animated_shape_2d/animated_shape_2d.svg<>0<>1<><>::
 animated_shape_2d.svg::CompressedTexture2D::6477451630523980476::1766645223::1778163030::1::::<><><>0<>0<>d8fcf24bc75b68d374a70b8d1e8fbb58<>res://.godot/imported/animated_shape_2d.svg-553e53ce92f97b853f74c3df5bf1775e.ctex::
 plugin.cfg::TextFile::-1::1766645223::0::1::::<><><>0<>0<><>::
 plugin.gd::GDScript::7416521953339836764::1766645223::0::1::::<>EditorPlugin<><>0<>1<><>::
@@ -44,7 +44,7 @@ zoom_more.png::CompressedTexture2D::4623264185374764162::1766645223::1778163030:
 zoom_reset.png::CompressedTexture2D::1939200241019872036::1766645223::1778163030::1::::<><><>0<>0<>65f319b79b6f0c5706b6534b5bae1f35<>res://.godot/imported/zoom_reset.png-e4d6cb226cda77916e9cedee3a20e395.ctex::
 ::res://addons/GDScript-Quality-of-Life-4c6554f65860ea53869749a72a24003ee75f8a74/::1780027292
 ::res://addons/GDScript-Quality-of-Life-4c6554f65860ea53869749a72a24003ee75f8a74/addons/::1780027292
-::res://addons/GDScript-Quality-of-Life-4c6554f65860ea53869749a72a24003ee75f8a74/addons/ScriptEditorQoL/::1780027292
+::res://addons/GDScript-Quality-of-Life-4c6554f65860ea53869749a72a24003ee75f8a74/addons/ScriptEditorQoL/::1780027296
 create_method_popup.gd::GDScript::930963103475327045::1780027292::0::1::::<>PopupPanel<><>0<>1<><>::
 create_method_popup.tscn::PackedScene::7958527179182503566::1780027292::0::1::::<><><>0<>0<><>::res://addons/ScriptEditorQoL/create_method_popup.gd
 GDScriptEditorQoL.gd::GDScript::3586259078025770006::1780027292::0::1::::GDScriptQualityOfLife<>EditorPlugin<><>0<>1<><>::
@@ -52,12 +52,12 @@ LICENSE.txt::TextFile::-1::1780027292::0::1::::<><><>0<>0<><>::
 plugin.cfg::TextFile::-1::1780027292::0::1::::<><><>0<>0<><>::
 ::res://addons/godot-script-tabs-1149f6fccdff5cd3123cc325686403ec45e65e08/::1780027293
 ::res://addons/godot-script-tabs-1149f6fccdff5cd3123cc325686403ec45e65e08/addons/::1780027293
-::res://addons/godot-script-tabs-1149f6fccdff5cd3123cc325686403ec45e65e08/addons/script-tabs/::1780027293
+::res://addons/godot-script-tabs-1149f6fccdff5cd3123cc325686403ec45e65e08/addons/script-tabs/::1780027296
 plugin.cfg::TextFile::-1::1780027293::0::1::::<><><>0<>0<><>::
 plugin.gd::GDScript::5750099880751721176::1780027293::0::1::::<>EditorPlugin<><>0<>1<><>::
 ::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/::1780027294
 ::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/addons/::1780027293
-::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/addons/godot_state_charts/::1780027294
+::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/addons/godot_state_charts/::1780027297
 all_of_guard.gd::GDScript::4032782787767503836::1780027293::0::1::::AllOfGuard<>Guard<>res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/addons/godot_state_charts/all_of_guard.svg<>0<>1<><>::
 all_of_guard.svg::CompressedTexture2D::1453032692278690117::1780027293::1780027297::1::::<><><>0<>0<>5b770452cb9870b0eae398eda538ddaf<>res://.godot/imported/all_of_guard.svg-80193f835d9052929c0d33e3a0aa7f22.ctex::
 animation_player_state.gd::GDScript::4535477501532504941::1780027293::0::1::::AnimationPlayerState<>AtomicState<>res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/addons/godot_state_charts/animation_player_state.svg<>0<>1<><>::
@@ -97,7 +97,7 @@ toggle_sidebar.svg::CompressedTexture2D::1486402018277283815::1780027294::178002
 transition.gd::GDScript::5178281000354720417::1780027294::0::1::::Transition<>Node<>res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/addons/godot_state_charts/transition.svg<>0<>1<><>::
 transition.svg::CompressedTexture2D::5268266130941655569::1780027294::1780027297::1::::<><><>0<>0<>e14f444086e484b5ee8c6c2ffc56356d<>res://.godot/imported/transition.svg-eca9ff31917f5e51fd4121109abd958c.ctex::
 ::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/addons/godot_state_charts/csharp/::1780027294
-::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/addons/godot_state_charts/utilities/::1780027294
+::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/addons/godot_state_charts/utilities/::1780027297
 debugger_history.gd::GDScript::1112942420142792590::1780027294::0::1::::<>RefCounted<><>0<>0<><>::
 editor_sidebar.gd::GDScript::6628531483693274840::1780027294::0::1::::<>Control<><>0<>1<><>::
 editor_sidebar.tscn::PackedScene::2698578693031666491::1780027294::0::1::::<><><>0<>0<><>::res://addons/godot_state_charts/utilities/editor_sidebar.gd<>uid://c4ojtah20jtxc::::res://addons/godot_state_charts/atomic_state.svg<>uid://bbudjoa3ds4qj::::res://addons/godot_state_charts/compound_state.svg<>uid://dsa1nco51br8d::::res://addons/godot_state_charts/parallel_state.svg<>uid://bkf1e240ouleb::::res://addons/godot_state_charts/history_state.svg<>uid://chb8tq62aj2b2::::res://addons/godot_state_charts/transition.svg<>uid://vga3avpb4gyh::::res://addons/godot_state_charts/toggle_sidebar.svg
@@ -126,19 +126,19 @@ new_theme.tres::Theme::1319215900418314941::1780027294::0::1::::<><><>0<>0<><>::
 ant_hill_demo.gd::GDScript::8873655014849696926::1780027294::0::1::::<>Node2D<><>0<>0<><>::
 ant_hill_demo.tscn::PackedScene::2630556192459322688::1780027294::0::1::::<><><>0<>0<><>::uid://cd6hbvgl1e2xy::::res://godot_state_charts_examples/platformer/terrain/terrain_tiles.tres<>res://godot_state_charts_examples/ant_hill/ant_hill_demo.gd<>uid://bcwkugn6v3oy7::::res://addons/godot_state_charts/utilities/state_chart_debugger.tscn<>uid://dy43c80qlfftx::::res://godot_state_charts_examples/ant_hill/ant/ant.tscn<>res://godot_state_charts_examples/ant_hill/nest/nest.tscn<>uid://bqalfgp8jjady::::res://godot_state_charts_examples/ant_hill/banana/banana.tscn<>uid://s2bj74tt0y7f::::res://godot_state_charts_examples/new_theme.tres<>res://godot_state_charts_examples/ant_hill/pause_controller.gd
 pause_controller.gd::GDScript::942183034267854142::1780027294::0::1::::<>Node<><>0<>0<><>::
-::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/ant_hill/ant/::1780027294
+::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/ant_hill/ant/::1780027297
 ant.gd::GDScript::9217688402112159782::1780027294::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ant.gdshader::Shader::4061943278667327394::1780027294::0::1::::<><><>0<>0<><>::
 ant.tscn::PackedScene::8905366673277619273::1780027294::0::1::::<><><>0<>0<><>::res://godot_state_charts_examples/ant_hill/ant/ant.gdshader<>uid://bqgc7cft671q0::::res://godot_state_charts_examples/ant_hill/ant/walk.png<>res://godot_state_charts_examples/ant_hill/ant/ant.gd<>uid://dy5xrmjffewnk::::res://godot_state_charts_examples/ant_hill/marker/marker.tscn<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd
 walk.png::CompressedTexture2D::3522007141493177649::1780027294::1780027297::1::::<><><>0<>0<>83ad9180c00e92c8797f5b94f79a72ea<>res://.godot/imported/walk.png-44948c28bdc88307aae55977f92b9158.ctex::
-::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/ant_hill/banana/::1780027294
+::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/ant_hill/banana/::1780027297
 banana.svg::CompressedTexture2D::5936970383998311864::1780027294::1780027297::1::::<><><>0<>0<>9f894cd5065bb8dedd03a4e7cb083408<>res://.godot/imported/banana.svg-4e42a5f389f1ccfd6b85aa278edf3701.ctex::
 banana.tscn::PackedScene::3510119337615491766::1780027294::0::1::::<><><>0<>0<><>::uid://cqt6bgiwgqym7::::res://godot_state_charts_examples/ant_hill/banana/banana.svg
-::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/ant_hill/marker/::1780027294
+::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/ant_hill/marker/::1780027297
 circle_white.svg::CompressedTexture2D::4374310915971513013::1780027294::1780027297::1::::<><><>0<>0<>17c3a6aaaba8226e3ce310cc5cc67a38<>res://.godot/imported/circle_white.svg-101a1102fc5177afa39340664469cb6c.ctex::
 marker.gd::GDScript::7741943661196434027::1780027294::0::1::::Marker<>Node2D<><>0<>0<><>::
 marker.tscn::PackedScene::8907153124761368940::1780027294::0::1::::<><><>0<>0<><>::uid://b3k7i5rrn5hhl::::res://godot_state_charts_examples/ant_hill/marker/circle_white.svg<>res://godot_state_charts_examples/ant_hill/marker/marker.gd
-::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/ant_hill/nest/::1780027294
+::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/ant_hill/nest/::1780027297
 nest.svg::CompressedTexture2D::1618238640897489098::1780027294::1780027297::1::::<><><>0<>0<>35f83bbd65e1f82e71517910cc272dc8<>res://.godot/imported/nest.svg-6e1da45462b73086711763f7b2d68f9c.ctex::
 nest.tscn::PackedScene::8415456399014672162::1780027294::0::1::::<><><>0<>0<><>::uid://xb5fialweqfa::::res://godot_state_charts_examples/ant_hill/nest/nest.svg
 ::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/automatic_transitions/::1780027294
@@ -148,7 +148,7 @@ the_frog.gd::GDScript::650497169634407456::1780027294::0::1::::<>CharacterBody2D
 ::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/cooldown/::1780027294
 cooldown_demo.tscn::PackedScene::5718809405997625697::1780027294::0::1::::<><><>0<>0<><>::uid://bcwkugn6v3oy7::::res://addons/godot_state_charts/utilities/state_chart_debugger.tscn<>uid://ch1pukkyc07qo::::res://godot_state_charts_examples/cooldown/skill_button/skill_button.tscn<>uid://bphe0g2d306fe::::res://godot_state_charts_examples/cooldown/icons/enchant-red-3.png<>uid://bjmc4abduaxww::::res://godot_state_charts_examples/cooldown/icons/fireball-eerie-2.png<>uid://b87nmomi1l48x::::res://godot_state_charts_examples/cooldown/icons/heal-jade-2.png<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/parallel_state.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd
 LICENSE.md::TextFile::-1::1780027294::0::1::::<><><>0<>0<><>::
-::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/cooldown/icons/::1780027294
+::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/cooldown/icons/::1780027297
 cooldown_overlay.png::CompressedTexture2D::1347091270336290752::1780027294::1780027297::1::::<><><>0<>0<>8e6f430822f81dff8aa75088529672b6<>res://.godot/imported/cooldown_overlay.png-0f1d256bd2e03eb6975e8625cd81e6c9.ctex::
 enchant-red-3.png::CompressedTexture2D::3453991852385255890::1780027294::1780027297::1::::<><><>0<>0<>5b7ab4334faa6390295c1198fea77e19<>res://.godot/imported/enchant-red-3.png-7bea16480a2cf6eb4fd98b869e0a1792.ctex::
 fireball-eerie-2.png::CompressedTexture2D::3043066033200749502::1780027294::1780027297::1::::<><><>0<>0<>f94aacf6af4d15ffdfcb4b61287d94fe<>res://.godot/imported/fireball-eerie-2.png-95ba867e97529d572d6e84b17ce16d16.ctex::
@@ -159,7 +159,7 @@ skill_button.tscn::PackedScene::5318784107003266454::1780027294::0::1::::<><><>0
 ::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/csharp/::1780027294
 csharp_example.tscn::PackedScene::7979241245440771127::1780027294::0::1::::<><><>0<>0<><>::res://godot_state_charts_examples/csharp/CSharpExample.cs<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd<>res://addons/godot_state_charts/expression_guard.gd<>uid://bcwkugn6v3oy7::::res://addons/godot_state_charts/utilities/state_chart_debugger.tscn
 README.txt::TextFile::-1::1780027294::0::1::::<><><>0<>0<><>::
-::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/history_states/::1780027294
+::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/history_states/::1780027297
 history_demo.gd::GDScript::2394543979253363447::1780027294::0::1::::<>Node<><>0<>0<><>::
 history_demo.tscn::PackedScene::4280526425888496378::1780027294::0::1::::<><><>0<>0<><>::uid://bgw8xgbwc2flx::::res://godot_state_charts_examples/history_states/white_rectangle.svg<>uid://bcwkugn6v3oy7::::res://addons/godot_state_charts/utilities/state_chart_debugger.tscn<>res://addons/godot_state_charts/state_chart.gd<>res://godot_state_charts_examples/history_states/history_demo.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/history_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd<>uid://s2bj74tt0y7f::::res://godot_state_charts_examples/new_theme.tres
 white_rectangle.svg::CompressedTexture2D::2855015107819941017::1780027294::1780027297::1::::<><><>0<>0<>743570b9e892a0e551d5fbd07401351e<>res://.godot/imported/white_rectangle.svg-442bde36f4f115e3dfc72342fbe16d95.ctex::
@@ -173,27 +173,27 @@ ten_state_charts.tscn::PackedScene::2702683195163397601::1780027295::0::1::::<><
 thousand_state_charts.tscn::PackedScene::4087307361689810619::1780027295::0::1::::<><><>0<>0<><>::uid://bddhmoj1g5lv3::::res://godot_state_charts_examples/performance_test/hundred_state_charts.tscn
 ::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/platformer/::1780027295
 platformer_demo.tscn::PackedScene::8180089590860927765::1780027295::0::1::::<><><>0<>0<><>::uid://cd6hbvgl1e2xy::::res://godot_state_charts_examples/platformer/terrain/terrain_tiles.tres<>uid://v5vg88it87oj::::res://godot_state_charts_examples/platformer/ninja_frog/ninja_frog.tscn<>uid://bcwkugn6v3oy7::::res://addons/godot_state_charts/utilities/state_chart_debugger.tscn<>uid://s2bj74tt0y7f::::res://godot_state_charts_examples/new_theme.tres<>uid://b22lg10c7wxrq::::res://godot_state_charts_examples/platformer/checkpoint/checkpoint.tscn<>uid://h0af1dot82p3::::res://godot_state_charts_examples/platformer/breaking_box/breaking_box.tscn<>uid://bvrbfp870t0kd::::res://godot_state_charts_examples/platformer/fireworks_box/fireworks_box.tscn
-::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/platformer/breaking_box/::1780027295
+::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/platformer/breaking_box/::1780027297
 break.png::CompressedTexture2D::1122235251623169200::1780027295::1780027297::1::::<><><>0<>0<>abf16d2830d55785cd3c109a7cd7918e<>res://.godot/imported/break.png-262fac6a95c20054fb6650fff5a2efb5.ctex::
 breaking_box.gd::GDScript::4644997664904149656::1780027295::0::1::::<>StaticBody2D<><>0<>0<><>::
 breaking_box.tscn::PackedScene::542941649191577662::1780027295::0::1::::<><><>0<>0<><>::res://godot_state_charts_examples/platformer/breaking_box/breaking_box.gd<>uid://c5dogybcf6yfo::::res://godot_state_charts_examples/platformer/breaking_box/idle.png<>res://addons/godot_state_charts/state_chart.gd<>uid://dq0ww6xvgeap3::::res://godot_state_charts_examples/platformer/breaking_box/hit.png<>uid://p8vbysdruo4o::::res://godot_state_charts_examples/platformer/breaking_box/break.png<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd<>res://addons/godot_state_charts/expression_guard.gd
 hit.png::CompressedTexture2D::8335269719162761338::1780027295::1780027297::1::::<><><>0<>0<>583a208b349ee12571ee000ad387d03b<>res://.godot/imported/hit.png-eea4d9b00f7a6b0b7ca7999a57c1dcd4.ctex::
 idle.png::CompressedTexture2D::6885561824655519584::1780027295::1780027297::1::::<><><>0<>0<>8e40b8ba9161274bfe71ad7308fd0b2e<>res://.godot/imported/idle.png-295ff32976ea9c1f129169edafd5dce9.ctex::
-::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/platformer/checkpoint/::1780027295
+::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/platformer/checkpoint/::1780027297
 checkpoint.gd::GDScript::4951610890294993814::1780027295::0::1::::<>Node2D<><>0<>0<><>::
 checkpoint.tscn::PackedScene::4337937667325189470::1780027295::0::1::::<><><>0<>0<><>::uid://4nlen5j7etvq::::res://godot_state_charts_examples/platformer/checkpoint/checkpoint_no_flag.png<>res://godot_state_charts_examples/platformer/checkpoint/checkpoint.gd<>uid://dfju87f6rw0nm::::res://godot_state_charts_examples/platformer/checkpoint/checkpoint_idle.png<>uid://beoe1hh5aggor::::res://godot_state_charts_examples/platformer/checkpoint/checkpoint_flag_out.png<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/parallel_state.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd<>res://addons/godot_state_charts/state_is_active_guard.gd
 checkpoint_flag_out.png::CompressedTexture2D::2696367025255048501::1780027295::1780027297::1::::<><><>0<>0<>021d9469dfa7e348a89f56d0bfd58966<>res://.godot/imported/checkpoint_flag_out.png-8c42af1235163dfae5b4941435a2f7e2.ctex::
 checkpoint_idle.png::CompressedTexture2D::7530060630013530506::1780027295::1780027297::1::::<><><>0<>0<>04d06dd9b2d8469ddd590eeee8b1d27e<>res://.godot/imported/checkpoint_idle.png-625cb33719ead836b55bbdd78000d466.ctex::
 checkpoint_no_flag.png::CompressedTexture2D::2062989136001312742::1780027295::1780027297::1::::<><><>0<>0<>20d66e08c94f286b58314bce8072fda7<>res://.godot/imported/checkpoint_no_flag.png-368d83d8e7301ceb7dcc399edd7f106b.ctex::
-::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/platformer/fireworks_box/::1780027295
+::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/platformer/fireworks_box/::1780027297
 box.png::CompressedTexture2D::1222617337817794984::1780027295::1780027297::1::::<><><>0<>0<>e626bc8fa5264287c1971263efb780c0<>res://.godot/imported/box.png-c1bc05d341b6d9f5b2c46a273cf8dc94.ctex::
 fireworks_box.gd::GDScript::8133477762925890212::1780027295::0::1::::<>Node2D<><>0<>0<><>::
 fireworks_box.tscn::PackedScene::3895551308190004131::1780027295::0::1::::<><><>0<>0<><>::res://godot_state_charts_examples/platformer/fireworks_box/fireworks_box.gd<>uid://roilgifkgiii::::res://godot_state_charts_examples/platformer/fireworks_box/box.png<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd<>res://addons/godot_state_charts/expression_guard.gd
-::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/platformer/ninja_frog/::1780027295
+::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/platformer/ninja_frog/::1780027297
 full.png::CompressedTexture2D::2846060422755467232::1780027295::1780027297::1::::<><><>0<>0<>41218bfd647e9c905d4cb7a891f7eaa1<>res://.godot/imported/full.png-7d388f4398c361c431cfb88e39bf0769.ctex::
 ninja_frog.gd::GDScript::1139770377177088264::1780027295::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ninja_frog.tscn::PackedScene::1537184605271307229::1780027295::0::1::::<><><>0<>0<><>::res://godot_state_charts_examples/platformer/ninja_frog/ninja_frog.gd<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>uid://bgswg1pgd01d1::::res://godot_state_charts_examples/platformer/ninja_frog/full.png<>res://addons/godot_state_charts/transition.gd
-::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/platformer/terrain/::1780027295
+::res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/godot_state_charts_examples/platformer/terrain/::1780027297
 green.png::CompressedTexture2D::2418948966290532011::1780027295::1780027297::1::::<><><>0<>0<>24b58be81126f87d67e6d6827b770ed5<>res://.godot/imported/green.png-59ac266e1c0997bde62dcd099ccbc711.ctex::
 terrain_tiles.png::CompressedTexture2D::9063928465518915970::1780027295::1780027297::1::::<><><>0<>0<>81d21711666a8a42eefb669d8d597879<>res://.godot/imported/terrain_tiles.png-6317d8a5d99614bc53015234d4320918.ctex::
 terrain_tiles.tres::TileSet::5047831526213325618::1780027295::0::1::::<><><>0<>0<><>::uid://d2evtvw3l7jug::::res://godot_state_charts_examples/platformer/terrain/terrain_tiles.png<>uid://bap00a5gcipy6::::res://godot_state_charts_examples/platformer/terrain/green.png
@@ -234,7 +234,7 @@ plugin.gd::GDScript::3484415935520294050::1780027293::0::1::::DMPlugin<>EditorPl
 settings.gd::GDScript::5108079527952811623::1780027293::0::1::::DMSettings<>Node<><>0<>1<><>::
 test_scene.gd::GDScript::7098965565189014022::1780027293::0::1::::BaseDialogueTestScene<>Node2D<><>0<>0<><>::
 test_scene.tscn::PackedScene::1416400481679934567::1780027293::0::1::::<><><>0<>0<><>::uid://c8e16qdgu40wo::::res://addons/dialogue_manager/test_scene.gd
-::res://addons/godot_dialogue_manager-3.10.4/addons/dialogue_manager/assets/::1780027292
+::res://addons/godot_dialogue_manager-3.10.4/addons/dialogue_manager/assets/::1780027297
 banner.png::CompressedTexture2D::5712008637852493176::1780027292::1780027297::1::::<><><>0<>0<>9493513a843c595a5e85876dec1bdfd7<>res://.godot/imported/banner.png-884c59559ba43bc2d0fa21b4f62e17ac.ctex::
 icon.svg::CompressedTexture2D::9148339284877624195::1780027292::1780027297::1::::<><><>0<>0<>7301820eb37dfdd7f13548e62e6f9fa7<>res://.godot/imported/icon.svg-67861c5bbf65b5d7a0a1206b0dc85fd8.ctex::
 responses_menu.svg::CompressedTexture2D::8371359403825774630::1780027292::1780027297::1::::<><><>0<>0<>442c862384835fb00e1b6168a0d5a945<>res://.godot/imported/responses_menu.svg-d1ca3f94c7d23896fc9e44c0b4b6cdcc.ctex::
@@ -297,7 +297,7 @@ main_view.tscn::PackedScene::4884668666408697448::1780027293::0::1::::<><><>0<>0
 ::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/::1780027296
 plugin.cfg::TextFile::-1::1780027296::0::1::::<><><>0<>0<><>::
 plugin.gd::GDScript::7033078295229374459::1780027296::0::1::::<>EditorPlugin<><>0<>1<><>::
-::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/assets/::1780027295
+::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/assets/::1780027297
 PhantomCameraBtnPrimaryDefault.png::CompressedTexture2D::5081567352117042767::1780027295::1780027297::1::::<><><>0<>0<>887cb5cdc4ed0995c8314152a9a51575<>res://.godot/imported/PhantomCameraBtnPrimaryDefault.png-59aad11fdd7e32a0ff57f64604d68bc4.ctex::
 PhantomCameraBtnPrimaryHover.png::CompressedTexture2D::1097276340276520798::1780027295::1780027297::1::::<><><>0<>0<>cd444aecdd907260f265589983d12b91<>res://.godot/imported/PhantomCameraBtnPrimaryHover.png-f45a30413167877d4f4d8ca72df0e814.ctex::
 ::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/examples/::1780027295
@@ -350,22 +350,22 @@ player_controller.gd::GDScript::1347305943724141471::1780027295::0::1::::<>Chara
 player_controller_first_person.gd::GDScript::1676696717993118250::1780027295::0::1::::<><><>0<>0<><>::
 player_controller_third_person.gd::GDScript::3125394055041950559::1780027295::0::1::::<><><>0<>0<><>::
 ::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/examples/textures/::1780027295
-::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/examples/textures/2D/::1780027295
+::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/examples/textures/2D/::1780027297
 inventory_container.png::CompressedTexture2D::4637741338914361246::1780027295::1780027297::1::::<><><>0<>0<>feac59d37b810e6a2a9dcb1195113d4a<>res://.godot/imported/inventory_container.png-11a127c0e52e8b3fc0780c71843f9a7a.ctex::
 level_spritesheet.png::CompressedTexture2D::7085760997330170155::1780027295::1780027297::1::::<><><>0<>0<>c7830fc06a705434bd17ab1fa60bdbbd<>res://.godot/imported/level_spritesheet.png-f1b6dc3fb34d59b0a96dbaa2fc019ae9.ctex::
 phantom_camera_2d_sprite.png::CompressedTexture2D::6326209594840534622::1780027295::1780027297::1::::<><><>0<>0<>8a6df2b016cf456171dd157cf5593ee6<>res://.godot/imported/phantom_camera_2d_sprite.png-76dc757698e97b6cf54125c3ddd37b6c.ctex::
 player_sprite.svg::CompressedTexture2D::6040932879121381428::1780027295::1780027297::1::::<><><>0<>0<>03071489a916c6556ced9c7970534911<>res://.godot/imported/player_sprite.svg-0cb454b277b5ce060a51eb43e5844eb4.ctex::
 sign_prompt.png::CompressedTexture2D::3188285415853117228::1780027295::1780027297::1::::<><><>0<>0<>d90e5f074e4048273ba56f4481855235<>res://.godot/imported/sign_prompt.png-5f8b184a9bf74c2547c7e5a160e0520b.ctex::
-::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/examples/textures/3D/::1780027295
+::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/examples/textures/3D/::1780027298
 checker_pattern_dark.png::CompressedTexture2D::3084653867032489619::1780027295::1780027297::1::::<><><>0<>0<>31fce72f4489f3ed1e27104216cb34a7<>res://.godot/imported/checker_pattern_dark.png-5bd2e17ca6af59064dc7be6143f280f1.s3tc.ctex::
 target.png::CompressedTexture2D::6764012358141806591::1780027295::1780027298::1::::<><><>0<>0<>3bdaad0c33c503606f0d0cf5c5aa62a5<>res://.godot/imported/target.png-0ddcd7c9cfc3e5d98b79c52cccba09ef.s3tc.ctex::
 ::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/examples/ui/::1780027295
 ui_inventory.tscn::PackedScene::7647500821014000442::1780027295::0::1::::<><><>0<>0<><>::uid://b7cs6me43ufh3::::res://addons/phantom_camera/examples/textures/2D/inventory_container.png<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
 ui_sign.tscn::PackedScene::596403574585461246::1780027295::0::1::::<><><>0<>0<><>::uid://bloouh2jtndx1::::res://addons/phantom_camera/examples/textures/2D/sign_prompt.png<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
-::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/fonts/::1780027295
+::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/fonts/::1780027297
 Nunito-Black.ttf::FontFile::6833869716374227054::1780027295::1780027297::1::::<><><>0<>0<>d39badae23d7268fd1da2b5ac56178cb<>res://.godot/imported/Nunito-Black.ttf-615adde3ca0bbeb5a4ecb4bd631a0081.fontdata::
 Nunito-Regular.ttf::FontFile::8643449995156224464::1780027295::1780027297::1::::<><><>0<>0<>afb67ba66842d9db762e6fa4f251f307<>res://.godot/imported/Nunito-Regular.ttf-dd92ec1b01d8ccacf58c6c802f736c1c.fontdata::
-::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/icons/::1780027296
+::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/icons/::1780027298
 phantom_camera_2d.svg::CompressedTexture2D::7314716664328769180::1780027295::1780027297::1::::<><><>0<>0<>947e3a8c079667136e6907caa0769586<>res://.godot/imported/phantom_camera_2d.svg-2da80c4b3ba6ded79ea2ff340d3b876c.ctex::
 phantom_camera_3d.svg::CompressedTexture2D::7072771485797767219::1780027295::1780027297::1::::<><><>0<>0<>115edb8d40cee7f0bb92c57da19c89ed<>res://.godot/imported/phantom_camera_3d.svg-65cb1ed0102d325eb4e79e74405430ec.ctex::
 phantom_camera_camera_3d_resource.svg::CompressedTexture2D::8073192168994023868::1780027295::1780027297::1::::<><><>0<>0<>062d08b3ef919c87c151536e3aa3ead4<>res://.godot/imported/phantom_camera_camera_3d_resource.svg-ef06b74dd3dc0efddc9655f8b64eb4c2.ctex::
@@ -382,9 +382,9 @@ phantom_camera_tween_director.svg::CompressedTexture2D::6919904133619491183::178
 phantom_camera_tween_director_resource.svg::CompressedTexture2D::7392619952358306663::1780027295::1780027297::1::::<><><>0<>0<>192b84ce56f9b3e29c5873517cb30f27<>res://.godot/imported/phantom_camera_tween_director_resource.svg-45ae9f84355e4ad14113069903d70830.ctex::
 phantom_camera_updater_panel_icon.svg::CompressedTexture2D::9215092105644912232::1780027295::1780027297::1::::<><><>0<>0<>cbb5d6904f72dcf6a80447337453e2d7<>res://.godot/imported/phantom_camera_updater_panel_icon.svg-0398878e7ddc471effbd469bf7bf20e0.ctex::
 warning.svg::CompressedTexture2D::5428568880367270299::1780027295::1780027297::1::::<><><>0<>0<>281c3c40c6ad57a158bc85d25c76af1d<>res://.godot/imported/warning.svg-25e9a8aea980691b906f3f9ea5e6513d.ctex::
-::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/icons/misc/::1780027295
+::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/icons/misc/::1780027297
 PriorityOverride.svg::CompressedTexture2D::8912176182624502929::1780027295::1780027297::1::::<><><>0<>0<>59876e5b2410f722bb6c0892791a2463<>res://.godot/imported/PriorityOverride.svg-094fa8e47ee91e6918bb93638e907107.ctex::
-::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/icons/viewfinder/::1780027295
+::res://addons/phantom-camera-0.11.0.2/addons/phantom_camera/icons/viewfinder/::1780027297
 Camera2DIcon.svg::CompressedTexture2D::4941179596290591277::1780027295::1780027297::1::::<><><>0<>0<>0c1c2f60f300a6196ae9282919cc9296<>res://.godot/imported/Camera2DIcon.svg-68aa5d391a79f77363a70fab7534a78b.ctex::
 Camera3DIcon.svg::CompressedTexture2D::7877918109027130005::1780027295::1780027297::1::::<><><>0<>0<>f4e9b5762d884b3fcc1f1312361ebba2<>res://.godot/imported/Camera3DIcon.svg-3e4bfbc76dadb6dfcfef94cd674c8e36.ctex::
 SceneTypesIcon.svg::CompressedTexture2D::7928082713000371025::1780027295::1780027297::1::::<><><>0<>0<>ce22335231ac7dac8216bea98ec8423d<>res://.godot/imported/SceneTypesIcon.svg-eaba614333dabdc3c11fbd63f57bc3b1.ctex::
@@ -462,9 +462,9 @@ audio.tscn::PackedScene::6108623536834543834::1779977744::0::1::::<><><>0<>0<><>
 ::res://managers/debug/::1778767602
 debug.gd.gd::GDScript::5920265852625096232::1778767502::0::1::::<>Node<><>0<>0<><>::
 debug.tscn::PackedScene::5357641576463007424::1778767602::0::1::::<><><>0<>0<><>::uid://cql26cfmdans7::::res://managers/debug/debug.gd.gd
-::res://managers/Scene/::1780027271
-scene_manager.gd::GDScript::7155077192652625465::1780027236::0::1::::<>Node<><>0<>0<><>::
-scene_manager.tscn::PackedScene::3106269761289557739::1780027271::0::1::::<><><>0<>0<><>::uid://c868ct33l84an::::res://managers/Scene/scene_manager.gd<>uid://ddxgjcn15adry::::res://addons/alo transition/transition.gdshader<>uid://brxfpfyv6x8ae::::res://icon.svg
+::res://managers/Scene/::1780027416
+scene_manager.gd::GDScript::7155077192652625465::1780027416::0::1::::<>Node<><>0<>0<><>::
+scene_manager.tscn::PackedScene::3106269761289557739::1780027387::0::1::::<><><>0<>0<><>::uid://c868ct33l84an::::res://managers/Scene/scene_manager.gd<>uid://ddxgjcn15adry::::res://addons/alo transition/transition.gdshader<>uid://brxfpfyv6x8ae::::res://icon.svg
 ::res://Resources/::1778562170
 ::res://Resources/themes/::1778562163
 ::res://Resources/tilesets/::1778562170
@@ -487,6 +487,6 @@ main_menu.tscn::PackedScene::6795794911471800477::1778856328::0::1::::<><><>0<>0
 ::res://Scenes/template/scenes/::1778561244
 ::res://Scenes/template/scripts/::1778561231
 ::res://Scenes/template/sprites/::1778561216
-::res://Scenes/template/UI/::1779977798
+::res://Scenes/template/UI/::1780027416
 button_to.gd::GDScript::662100424720298740::1778855391::0::1::::<>Control<><>0<>0<><>::
-button_to.tscn::PackedScene::2511915985060759255::1779977798::0::1::::<><><>0<>0<><>::uid://joyxybfb6t3i::::res://Scenes/template/UI/button_to.gd
+button_to.tscn::PackedScene::2511915985060759255::1780027416::0::1::::<><><>0<>0<><>::uid://joyxybfb6t3i::::res://Scenes/template/UI/button_to.gd
