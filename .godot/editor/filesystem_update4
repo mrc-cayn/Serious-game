@@ -1,7 +1,2 @@
 res://managers/Scene/scene_manager.tscn
-res://Scenes/template/UI/button_to.tscn
-res://Scenes/template/UI/button_to.gd
 res://managers/Scene/scene_manager.gd
-res://Scenes/Menu's/Main_menu/main_menu.tscn
-res://managers/Audio/audio.tscn
-res://managers/Audio/audio.gd

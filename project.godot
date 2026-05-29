@@ -46,12 +46,13 @@ gdscript/warnings/unused_signal=0
 
 [display]
 
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/size/viewport_width=1080
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/animated shape/addons/goutte.animated_shape_2d/plugin.cfg")
+enabled=PackedStringArray("res://addons/animated shape/addons/goutte.animated_shape_2d/plugin.cfg", "res://addons/godot-script-tabs-1149f6fccdff5cd3123cc325686403ec45e65e08/addons/script-tabs/plugin.cfg", "res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/addons/godot_state_charts/plugin.cfg")
 
 [file_customization]
 
@@ -137,3 +138,5 @@ q={
 
 textures/canvas_textures/default_texture_filter=0
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+2d/size/resizable=false
+2d/stretch/aspect="keep"
