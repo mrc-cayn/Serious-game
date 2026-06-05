@@ -11,6 +11,8 @@ func change_scene(target_uid):
 	print("changing scene to "," ",target_uid," ",current_scene_path)
 
 func update_current_scene():
+	var a := 0.1
+	#a ++ = a
 	get_tree().change_scene_to_file(current_scene_path)
 	self.emit_signal("scene_changed")
 

@@ -1,3 +1,11 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
 config_version=5
 
 [addons]
@@ -44,7 +52,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/animated shape/addons/goutte.animated_shape_2d/plugin.cfg", "res://addons/godot-script-tabs-1149f6fccdff5cd3123cc325686403ec45e65e08/addons/script-tabs/plugin.cfg", "res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/addons/godot_state_charts/plugin.cfg")
+enabled=PackedStringArray("res://addons/ScriptEditorQoL/plugin.cfg", "res://addons/animated shape/addons/goutte.animated_shape_2d/plugin.cfg", "res://addons/godot-statecharts-5405e88f472c0500cbf658afbb8d9f6c8eee7b97/addons/godot_state_charts/plugin.cfg")
 
 [file_customization]
 
