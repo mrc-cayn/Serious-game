@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://cfl5bjcxegtlp"]
+
+[ext_resource type="Script" uid="uid://b37afmvvw3qny" path="res://Scenes/player/scripts/movement.gd" id="1_8qf04"]
+[ext_resource type="Script" uid="uid://bdpyidkvbgox" path="res://Scenes/player/scripts/player.gd" id="1_o5yj7"]
+[ext_resource type="Texture2D" uid="uid://brxfpfyv6x8ae" path="res://icon.svg" id="1_vxk3u"]
+[ext_resource type="Script" uid="uid://vvh2nwrs8beu" path="res://Scenes/player/scripts/animation.gd" id="3_3j77l"]
+[ext_resource type="Script" uid="uid://bw1iqj2b6iews" path="res://Scenes/player/scripts/hammer_attack.gd" id="3_sljom"]
+[ext_resource type="Texture2D" uid="uid://c0tu8nydfc7x3" path="res://extra/Debug_sprites/Sprite-0004.png" id="5_3j77l"]
+[ext_resource type="Script" uid="uid://cin1mqb8ybpop" path="res://Scenes/player/scenes/player_hurtbox.gd" id="7_se842"]
+
+[sub_resource type="Animation" id="Animation_o5yj7"]
+resource_name = "Idle"
+
+[sub_resource type="Animation" id="Animation_sisf3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vxk3u"]
+resource_name = "Spin"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sisf3"]
+_data = {
+&"Idle": SubResource("Animation_o5yj7"),
+&"RESET": SubResource("Animation_sisf3"),
+&"Spin": SubResource("Animation_vxk3u")
+}
+
+[sub_resource type="Curve2D" id="Curve2D_sisf3"]
+_data = {
+"points": PackedVector2Array(0.12514761, -39.968227, -0.12514761, 39.968227, 96, -96, 0, 0, 0, 0, 0, -64, 0.1603865, 40.033623, -0.1603865, -40.033623, -96, -96, 0, 0, 0, 0, 0, -128, 0.13725112, -39.93755, -0.13725112, 39.93755, 96, -96)
+}
+point_count = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3j77l"]
+size = Vector2(122.43469, 55.999725)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_se842"]
+size = Vector2(112, 176)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3j77l"]
+radius = 88.0
+height = 224.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1025752439 groups=["player"]]
+y_sort_enabled = true
+script = ExtResource("1_o5yj7")
+hammer_spin_time_multiplier = 0.5
+
+[node name="Movement" type="Node" parent="." unique_id=2038282788 node_paths=PackedStringArray("_player")]
+script = ExtResource("1_8qf04")
+_player = NodePath("..")
+max_jump_time = 0.2
+
+[node name="jump_timer" type="Timer" parent="Movement" unique_id=897190206]
+one_shot = true
+
+[node name="cayotee_timer" type="Timer" parent="Movement" unique_id=542966415]
+wait_time = 0.2
+one_shot = true
+
+[node name="Hammer_attack" type="Node" parent="." unique_id=287227411 node_paths=PackedStringArray("_player")]
+script = ExtResource("3_sljom")
+_player = NodePath("..")
+
+[node name="Animation" type="Node2D" parent="." unique_id=2082212004 node_paths=PackedStringArray("_player")]
+y_sort_enabled = true
+script = ExtResource("3_3j77l")
+_player = NodePath("..")
+
+[node name="Sprite" type="Sprite2D" parent="Animation" unique_id=1986666751]
+unique_name_in_owner = true
+z_as_relative = false
+scale = Vector2(1, 1.5)
+texture = ExtResource("1_vxk3u")
+
+[node name="Hammer loop" type="AnimationPlayer" parent="Animation" unique_id=912199720]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_sisf3")
+
+[node name="Path2D" type="Path2D" parent="Animation" unique_id=198413619]
+y_sort_enabled = true
+position = Vector2(-1.8189894e-12, 128)
+scale = Vector2(0.9999998, 1.3581132)
+curve = SubResource("Curve2D_sisf3")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Animation/Path2D" unique_id=821699976]
+position = Vector2(96, -96)
+rotation = 1.5739274
+
+[node name="Hammer" type="Sprite2D" parent="Animation/Path2D/PathFollow2D" unique_id=1135747774]
+unique_name_in_owner = true
+position = Vector2(25.363663, 15.920656)
+rotation = -1.5707964
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_3j77l")
+offset = Vector2(0, -64)
+
+[node name="Damage_area" type="Area2D" parent="Animation/Path2D/PathFollow2D" unique_id=1454761423]
+
+[node name="Damage_hitbox" type="CollisionShape2D" parent="Animation/Path2D/PathFollow2D/Damage_area" unique_id=1983097559]
+position = Vector2(-48.875374, 20.105103)
+scale = Vector2(0.9999996, 0.9999997)
+shape = SubResource("RectangleShape2D_3j77l")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=524462631]
+shape = SubResource("RectangleShape2D_se842")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1768137452 groups=["player"]]
+script = ExtResource("7_se842")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1271100109]
+shape = SubResource("CapsuleShape2D_3j77l")
+debug_color = Color(0.69, 0, 0.25300008, 0.41960785)
+
+[node name="Hammer_timer" type="Timer" parent="." unique_id=1938270881]
+unique_name_in_owner = true
+one_shot = true
+
+[connection signal="hammer_hit" from="Animation" to="." method="_on_animation_hammer_hit"]
+[connection signal="hammer_hit" from="Animation" to="Movement" method="_on_animation_hammer_hit"]
+[connection signal="hammer_hit" from="Animation" to="Hammer_attack" method="_on_animation_hammer_hit"]

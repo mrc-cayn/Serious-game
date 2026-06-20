@@ -1,2 +1,14 @@
-res://managers/Scene/scene_manager.tscn
-res://managers/Scene/scene_manager.gd
+res://Scenes/player/scenes/player.tscn
+res://main.tscn
+res://Scenes/player/scenes/movement.gd
+res://globals/global.tscn
+res://globals/global.gd
+res://Scenes/player/scenes/player.gd
+res://Scenes/player/scripts/movement.gd
+res://Scenes/player/scripts/player.gd
+res://Scenes/player/scripts/animation.gd
+res://Scenes/player/scripts/hammer_attack.gd
+res://Scenes/player/scenes/player_hurtbox.gd
+res://camera_2d.gd
+res://Scenes/enimies/scenes/enemy_1/enemy_1.tscn
+res://Scenes/enimies/scenes/enemy_1/hurt_box.gd

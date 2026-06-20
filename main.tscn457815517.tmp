@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cspyvje8po63w"]
+
+[ext_resource type="Script" uid="uid://pf33qtqlaf3r" path="res://Temp/node_2d.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://o0n67kg0wna3" path="res://Temp/node_2d_2.gd" id="2_0xm2m"]
+
+[node name="main" type="Node2D" unique_id=2046982676]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1372000583]
+position = Vector2(472, 312)
+script = ExtResource("1_ig7tw")
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=992055366]
+script = ExtResource("2_0xm2m")
+
+[connection signal="test_signal" from="Node2D" to="Node2D2" method="_on_node_2d_test_signal"]

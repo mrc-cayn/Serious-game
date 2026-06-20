@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://cfl5bjcxegtlp"]
+
+[ext_resource type="Script" uid="uid://b37afmvvw3qny" path="res://Scenes/player/scripts/movement.gd" id="1_8qf04"]
+[ext_resource type="Script" uid="uid://bdpyidkvbgox" path="res://Scenes/player/scripts/player.gd" id="1_o5yj7"]
+[ext_resource type="Texture2D" uid="uid://brxfpfyv6x8ae" path="res://icon.svg" id="1_vxk3u"]
+[ext_resource type="Texture2D" uid="uid://spcp5dh2w6f2" path="res://extra/Debug_sprites/Sprite-0003.png" id="2_sisf3"]
+
+[sub_resource type="Animation" id="Animation_o5yj7"]
+resource_name = "Idle"
+
+[sub_resource type="Animation" id="Animation_sisf3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vxk3u"]
+resource_name = "Spin"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sisf3"]
+_data = {
+&"Idle": SubResource("Animation_o5yj7"),
+&"RESET": SubResource("Animation_sisf3"),
+&"Spin": SubResource("Animation_vxk3u")
+}
+
+[sub_resource type="Curve2D" id="Curve2D_sisf3"]
+_data = {
+"points": PackedVector2Array(-0.37412435, -32.922947, 0.37412435, 32.922947, 96, -96, 0, 0, 0, 0, 0, -64, 0.37412438, 32.174698, -0.37412438, -32.174698, -96, -96, 0, 0, 0, 0, 0, -128, -0.18706219, -31.61351, 0.18706219, 31.61351, 96, -96)
+}
+point_count = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5yj7"]
+size = Vector2(128, 192)
+
+[node name="Player" type="CharacterBody2D" unique_id=1025752439 groups=["player"]]
+y_sort_enabled = true
+script = ExtResource("1_o5yj7")
+
+[node name="Movement" type="Node" parent="." unique_id=2038282788 node_paths=PackedStringArray("_player")]
+script = ExtResource("1_8qf04")
+_player = NodePath("..")
+walk_speed = null
+max_falling_velocity = null
+gravity_acceleration = null
+gravity_multiplier = null
+max_jump_speed = null
+max_jump_time = null
+
+[node name="jump_timer" type="Timer" parent="Movement" unique_id=897190206]
+one_shot = true
+
+[node name="Animation" type="Node2D" parent="." unique_id=2082212004]
+y_sort_enabled = true
+
+[node name="Sprite" type="Sprite2D" parent="Animation" unique_id=1986666751]
+unique_name_in_owner = true
+z_as_relative = false
+scale = Vector2(1, 1.5)
+texture = ExtResource("1_vxk3u")
+
+[node name="Hammer loop" type="AnimationPlayer" parent="Animation" unique_id=912199720]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_sisf3")
+
+[node name="Path2D" type="Path2D" parent="Animation" unique_id=198413619]
+y_sort_enabled = true
+position = Vector2(0, 96)
+curve = SubResource("Curve2D_sisf3")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Animation/Path2D" unique_id=821699976]
+position = Vector2(96, -96)
+rotation = 1.5594332
+
+[node name="Hammer" type="Sprite2D" parent="Animation/Path2D/PathFollow2D" unique_id=1135747774]
+unique_name_in_owner = true
+position = Vector2(1.4971962, -0.52354944)
+scale = Vector2(0.40754, 0.40754)
+texture = ExtResource("2_sisf3")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=524462631]
+shape = SubResource("RectangleShape2D_o5yj7")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1768137452]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1271100109]

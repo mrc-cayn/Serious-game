@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://da1i31ig4b38b"]
+
+[ext_resource type="Texture2D" uid="uid://bg7voba55hhtd" path="res://extra/Debug_sprites/Sprite-0001.png" id="1_77hrf"]
+[ext_resource type="Script" uid="uid://td553v3imgb8" path="res://Scenes/enimies/scenes/enemy_1/hurt_box.gd" id="2_tj80v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77hrf"]
+size = Vector2(112, 208)
+
+[node name="Enemy_1" type="CharacterBody2D" unique_id=457450823]
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=2145184233]
+shape = SubResource("RectangleShape2D_77hrf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=422950664]
+modulate = Color(0.27, 0, 0, 1)
+scale = Vector2(0.4375, 0.8125)
+texture = ExtResource("1_77hrf")
+
+[node name="Hurt_box" type="Area2D" parent="." unique_id=129396915]
+script = ExtResource("2_tj80v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt_box" unique_id=339012868]
