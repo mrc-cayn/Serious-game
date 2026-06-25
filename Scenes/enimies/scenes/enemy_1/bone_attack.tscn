@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://lvnnl4wwt524"]
+
+[ext_resource type="Script" uid="uid://by2xoqhxtqlor" path="res://Scenes/enimies/scenes/enemy_1/bone_attack.gd" id="1_1kt28"]
+[ext_resource type="Texture2D" uid="uid://dm5a4rgwj6cyd" path="res://Scenes/enimies/sprites/Skeli/bonerang.png" id="2_4vyu6"]
+[ext_resource type="PackedScene" uid="uid://bndt6f8sbqtmn" path="res://Scenes/enimies/damage_area.tscn" id="2_en4qv"]
+[ext_resource type="Texture2D" uid="uid://ba7flfgsclrhw" path="res://Scenes/enimies/sprites/Skeli/bonerang_n.png" id="3_1kt28"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j7rq2"]
+radius = 16.0
+
+[sub_resource type="Animation" id="Animation_en4qv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4vyu6"]
+resource_name = "loop"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1kt28"]
+_data = {
+&"RESET": SubResource("Animation_en4qv"),
+&"loop": SubResource("Animation_4vyu6")
+}
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_xl1q7"]
+diffuse_texture = ExtResource("2_4vyu6")
+normal_texture = ExtResource("3_1kt28")
+
+[node name="Bone_attack" type="Node2D" unique_id=567582470]
+script = ExtResource("1_1kt28")
+
+[node name="Damage_area" parent="." unique_id=765659741 instance=ExtResource("2_en4qv")]
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Damage_area" unique_id=1438068513]
+shape = SubResource("CircleShape2D_j7rq2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=860462299]
+libraries/ = SubResource("AnimationLibrary_1kt28")
+autoplay = &"loop"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1846394108]
+position = Vector2(4.7683716e-07, 0)
+texture = SubResource("CanvasTexture_xl1q7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=658798085]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=179103819]
+shape = SubResource("CircleShape2D_j7rq2")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://da1i31ig4b38b"]
+
+[ext_resource type="Script" uid="uid://cvfefi18mbtjq" path="res://Scenes/enimies/scenes/enemy_1/enemy_1.gd" id="1_47ub8"]
+[ext_resource type="Texture2D" uid="uid://bg7voba55hhtd" path="res://extra/Debug_sprites/Sprite-0001.png" id="1_77hrf"]
+[ext_resource type="PackedScene" uid="uid://bm8gxktq3ajqp" path="res://Scenes/hurtbox.tscn" id="2_tj80v"]
+[ext_resource type="Script" uid="uid://b0bug75ioyymt" path="res://Scenes/enimies/Path_finder.gd" id="4_r4m0w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_47ub8"]
+radius = 56.0
+height = 224.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_47ub8"]
+size = Vector2(112, 208)
+
+[node name="Enemy_1" type="CharacterBody2D" unique_id=457450823 groups=["enemy"]]
+script = ExtResource("1_47ub8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=422950664]
+modulate = Color(0.27, 0, 0, 1)
+scale = Vector2(0.4375, 0.8125)
+texture = ExtResource("1_77hrf")
+
+[node name="Hurtbox" parent="." unique_id=1180487083 node_paths=PackedStringArray("target") groups=["enemy", "is_hittable"] instance=ExtResource("2_tj80v")]
+target = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=143665099]
+shape = SubResource("CapsuleShape2D_47ub8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1071200657]
+shape = SubResource("RectangleShape2D_47ub8")
+
+[node name="Path_finding" type="Node2D" parent="." unique_id=1429789760]
+script = ExtResource("4_r4m0w")

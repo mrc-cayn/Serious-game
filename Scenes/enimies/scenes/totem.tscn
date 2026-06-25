@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://b81xjxhqtby8c"]
+
+[ext_resource type="Script" uid="uid://bxlfyvquwcnka" path="res://Scenes/enimies/scenes/totem.gd" id="1_o68yl"]
+[ext_resource type="Texture2D" uid="uid://spcp5dh2w6f2" path="res://extra/Debug_sprites/Sprite-0003.png" id="2_kxy4m"]
+[ext_resource type="PackedScene" uid="uid://cvgw28rolhu7o" path="res://globals/Dialauge/dialoge_area.tscn" id="4_i6asa"]
+[ext_resource type="PackedScene" uid="uid://bm8gxktq3ajqp" path="res://Scenes/hurtbox.tscn" id="4_usvlf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j7rq2"]
+radius = 104.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7ts0"]
+size = Vector2(64, 128)
+
+[node name="totem" type="Node2D" unique_id=1064929864]
+script = ExtResource("1_o68yl")
+cooldown = 6.0
+possible_messages = Array[String](["you are now breathing manually", "there is a skeleton in you which wants freedom", "it's scary when the [b]abyss stares back ", "You are nothing but an arangement of atoms", "the undead are in [color=Red]agony[/color] ,i beg of you free them", "[tornado]:3", "is it better to be ignorant? to the inevitable", "The princess is a[color=Red][shake] LIE[/shake][/color]", "You are gonna[rainbow] DIe LMAO", "[tornado]boundries are ment to be broken", "The undead start living when they[b] die", "Why don't necromanccers use the skeliton inside people..."])
+
+[node name="Timer" type="Timer" parent="." unique_id=200779639]
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=188339850]
+modulate = Color(0.2, 0.2, 0.2, 1)
+position = Vector2(0, -1.9073486e-06)
+scale = Vector2(1, 2)
+texture = ExtResource("2_kxy4m")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=185430554]
+position = Vector2(128, 0)
+rotation = 1.5707964
+target_position = Vector2(1.1190115e-05, 256)
+collision_mask = 4
+
+[node name="Dialoge_area" parent="." unique_id=749131481 node_paths=PackedStringArray("icon") instance=ExtResource("4_i6asa")]
+icon = NodePath("Label")
+text_speed = 40.0
+
+[node name="Label" type="Label" parent="Dialoge_area" unique_id=417701071]
+offset_left = -16.0
+offset_top = -176.0
+offset_right = 25.0
+offset_bottom = -74.0
+theme_override_font_sizes/font_size = 74
+text = "E"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialoge_area" unique_id=1122240354]
+shape = SubResource("CircleShape2D_j7rq2")
+
+[node name="Hurtbox" parent="." unique_id=1180487083 node_paths=PackedStringArray("target") groups=["enemy", "is_hittable"] instance=ExtResource("4_usvlf")]
+target = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=199563991]
+shape = SubResource("CircleShape2D_j7rq2")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1504450330]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1195685883]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2043907315]
+shape = SubResource("RectangleShape2D_t7ts0")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="intaracted_with" from="Dialoge_area" to="." method="_on_dialoge_area_intaracted_with"]

@@ -1,0 +1,15 @@
+[gd_resource type="Theme" format=3 uid="uid://bkw1ebwdeq47o"]
+
+[ext_resource type="FontFile" uid="uid://do3wd2l2kw0qc" path="res://Resources/Fonts/Baskervville/static/Baskervville-SemiBold.ttf" id="1_gtf2w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mqaw6"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lyb5f"]
+bg_color = Color(0.8353144, 0.5177306, 0, 1)
+
+[resource]
+default_font = ExtResource("1_gtf2w")
+default_font_size = 64
+ProgressBar/styles/background = SubResource("StyleBoxFlat_mqaw6")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_lyb5f")

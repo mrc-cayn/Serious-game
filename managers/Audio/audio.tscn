@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://ctbcewtmahxhy"]
 
 [ext_resource type="Script" uid="uid://dwbbg8u200imy" path="res://managers/Audio/audio.gd" id="1_vfehe"]
+[ext_resource type="AudioStream" uid="uid://bp3aixlxa5d1g" path="res://assets/audio/music/Little Moments.mp3" id="2_cjge1"]
 
 [node name="Audio" type="Node" unique_id=2119929751]
 script = ExtResource("1_vfehe")
 
-[node name="music" type="AudioStreamPlayer2D" parent="." unique_id=460758120]
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=859807714]
+stream = ExtResource("2_cjge1")
+volume_db = 12.0
+autoplay = true
+parameters/looping = true

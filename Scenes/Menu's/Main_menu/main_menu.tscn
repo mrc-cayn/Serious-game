@@ -1,3 +1,169 @@
 [gd_scene format=3 uid="uid://c3260qhbd047r"]
 
+[ext_resource type="Theme" uid="uid://sda5jgiceuo0" path="res://Resources/themes/GameTheme.tres" id="1_ollly"]
+[ext_resource type="PackedScene" uid="uid://bb115iag1vle2" path="res://Scenes/template/UI/button_to.tscn" id="2_vbkdf"]
+[ext_resource type="Theme" uid="uid://bkw1ebwdeq47o" path="res://Resources/themes/Default.tres" id="3_71hdd"]
+[ext_resource type="Texture2D" uid="uid://bjd2alpmv75bv" path="res://extra/Screenshot 2026-06-23 081052.png" id="4_e8hy2"]
+[ext_resource type="Texture2D" uid="uid://spcp5dh2w6f2" path="res://extra/Debug_sprites/Sprite-0003.png" id="5_g4g8o"]
+[ext_resource type="Texture2D" uid="uid://c7addq1j7b67c" path="res://assets/glow.tres" id="6_ycs4l"]
+[ext_resource type="Script" uid="uid://vdo3k7wpo326" path="res://Scenes/Menu's/Main_menu/how_to_play.gd" id="7_7dqdx"]
+[ext_resource type="FontFile" uid="uid://cduxx7pgwwsq2" path="res://Resources/Fonts/BebasNeue-Regular.ttf" id="8_fd5jd"]
+[ext_resource type="FontFile" uid="uid://yyqo04hn4qrx" path="res://Resources/Fonts/Almendra/Almendra-BoldItalic.ttf" id="9_htjxr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7rq2"]
+atlas = ExtResource("4_e8hy2")
+region = Rect2(124, 43, 292, 292)
+
+[sub_resource type="Theme" id="Theme_myoe7"]
+default_font = ExtResource("9_htjxr")
+default_font_size = 32
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/shadow_offset_x = 21
+RichTextLabel/constants/shadow_offset_y = 1
+RichTextLabel/font_sizes/bold_font_size = 16
+RichTextLabel/font_sizes/normal_font_size = 50
+RichTextLabel/fonts/normal_font = ExtResource("8_fd5jd")
+
 [node name="MainMenu" type="Node2D" unique_id=1335721075]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1402789751]
+
+[node name="title" type="Label" parent="." unique_id=980500147]
+offset_left = -424.0
+offset_top = -296.0
+offset_right = 408.0
+offset_bottom = -129.0
+pivot_offset = Vector2(304, 48)
+theme = ExtResource("1_ollly")
+theme_override_constants/outline_size = 128
+text = "Drunken Knight"
+
+[node name="ButtonTo" parent="." unique_id=1933091590 node_paths=PackedStringArray("button_object") instance=ExtResource("2_vbkdf")]
+offset_left = -280.0
+offset_top = 8.0
+offset_right = -32.0
+offset_bottom = 48.0
+target_path = "uid://c6w68qsk2i3an"
+button_object = NodePath("play_button")
+on_release = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ButtonTo" unique_id=369784961]
+layout_mode = 0
+offset_left = -144.0
+offset_top = -80.0
+offset_right = 640.0
+offset_bottom = 160.0
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_j7rq2")
+region_rect = Rect2(0, 0, 292, 292)
+patch_margin_left = 97
+patch_margin_top = 97
+patch_margin_right = 97
+patch_margin_bottom = 97
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="play_button" type="TextureButton" parent="ButtonTo" unique_id=1188171661]
+modulate = Color(1, 1, 1, 0.27450982)
+layout_mode = 0
+offset_left = -144.0
+offset_top = -80.0
+offset_right = 248.0
+offset_bottom = 40.0
+theme = ExtResource("3_71hdd")
+button_mask = 7
+texture_pressed = ExtResource("5_g4g8o")
+texture_hover = ExtResource("6_ycs4l")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="ButtonTo" unique_id=1431933072]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -64.0
+offset_right = 109.0
+offset_bottom = 19.0
+theme = ExtResource("3_71hdd")
+text = "Play"
+
+[node name="HSlider" type="HSlider" parent="." unique_id=1325173496]
+offset_right = 480.0
+offset_bottom = 16.0
+
+[node name="how_to_play" type="Control" parent="." unique_id=1045159635]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -280.0
+offset_top = 192.0
+offset_right = -240.0
+offset_bottom = 232.0
+script = ExtResource("7_7dqdx")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="how_to_play" unique_id=333396177]
+layout_mode = 0
+offset_left = -144.0
+offset_top = -64.0
+offset_right = 640.0
+offset_bottom = 192.0
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_j7rq2")
+region_rect = Rect2(0, 0, 292, 292)
+patch_margin_left = 97
+patch_margin_top = 97
+patch_margin_right = 97
+patch_margin_bottom = 97
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="play_button" type="TextureButton" parent="how_to_play" unique_id=1572176121]
+modulate = Color(1, 1, 1, 0.27450982)
+layout_mode = 0
+offset_left = -144.0
+offset_top = -64.0
+offset_right = 248.0
+offset_bottom = 64.0
+theme = ExtResource("3_71hdd")
+button_mask = 7
+texture_pressed = ExtResource("5_g4g8o")
+texture_hover = ExtResource("6_ycs4l")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="how_to_play" unique_id=1045853193]
+layout_mode = 0
+offset_left = -122.835
+offset_top = -48.0
+offset_right = 225.16501
+offset_bottom = 35.0
+theme = ExtResource("3_71hdd")
+text = "How to play"
+
+[node name="PopupPanel" type="PopupPanel" parent="how_to_play" unique_id=528560997]
+transparent_bg = false
+oversampling_override = 1.0
+title = "How to play"
+initial_position = 1
+size = Vector2i(972, 648)
+visible = true
+wrap_controls = false
+borderless = false
+transparent = false
+theme = SubResource("Theme_myoe7")
+
+[node name="Label" type="RichTextLabel" parent="how_to_play/PopupPanel" unique_id=1549918712]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 968.0
+offset_bottom = 644.0
+theme = ExtResource("3_71hdd")
+theme_override_constants/shadow_outline_size = 4
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 1
+bbcode_enabled = true
+text = "
+-Spin attack; Left Click hold down
+-Jump: Space
+-Interactions: E
+
+gain speed for [color=Red][shake]more damage"
+
+[connection signal="button_up" from="how_to_play/play_button" to="how_to_play" method="_on_play_button_button_up"]

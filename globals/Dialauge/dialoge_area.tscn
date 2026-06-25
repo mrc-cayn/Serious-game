@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cvgw28rolhu7o"]
+
+[ext_resource type="Script" uid="uid://dwn2648gu08l1" path="res://globals/Dialauge/dialoge_area.gd" id="1_eaeq1"]
+
+[node name="Dialoge_area" type="Area2D" unique_id=749131481]
+script = ExtResource("1_eaeq1")
+message_list = Array[String]([""])
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

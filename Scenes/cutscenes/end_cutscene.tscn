@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b8rg6ahdg6i3e"]
+
+[ext_resource type="Script" uid="uid://cg37lceblck2m" path="res://Scenes/cutscenes/start_cutsccene.gd" id="1_x21pa"]
+
+[node name="end_cutscene" type="Node2D" unique_id=831070291 groups=["cutscene", "main"]]
+script = ExtResource("1_x21pa")
+dialoge = Array[String](["-The knight kicks the door to the royal chamber open.", "-The knight enters the pitch-black room with his guard up ", "-It's completely silent; someone could attack at any moment. Or is this a trap?", "-The knight's eyes were suddenly blinded by flashes of light. ", "-SUPRISEEEEEEEE!!! ", "-The knight is so taken aback that he doesn't know what to do. Seeing the knight in this state, the princess begins to explain.", "-Since we unintentionally put you in this situation, we wanted to surprise you. Both as an apology and so you’d know we’re here for you", "-“B-but what about all those monsters I killed?”", "-(The Necromancer speaks) Since we secretly swapped your sword at the bar, you didn't actually kill any of them", "-The knight was completely at a loss. All the effort they had gone to for him had moved him deeply.", "-T-Thanks everyone…"])
+start = false
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1249135677]
+
+[node name="1" type="Sprite2D" parent="." unique_id=918042970]
+
+[node name="2" type="Sprite2D" parent="." unique_id=90311505]
+visible = false
+
+[node name="3" type="Sprite2D" parent="." unique_id=1772474074]
+visible = false
+
+[node name="4" type="Sprite2D" parent="." unique_id=929345296]
+visible = false
+
+[node name="5" type="Sprite2D" parent="." unique_id=788474558]
+visible = false
+
+[node name="6" type="Sprite2D" parent="." unique_id=225261651]
+visible = false
+
+[node name="7" type="Sprite2D" parent="." unique_id=541249903]
+visible = false
+
+[node name="8" type="Sprite2D" parent="." unique_id=345540083]
+visible = false
+
+[node name="9" type="Sprite2D" parent="." unique_id=1240096851]
+visible = false
+
+[node name="10" type="Sprite2D" parent="." unique_id=1375046915]
+visible = false
+
+[node name="11" type="Sprite2D" parent="." unique_id=1169425908]
+visible = false

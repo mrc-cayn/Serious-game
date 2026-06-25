@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dd40nxchin41s"]
+
+[ext_resource type="Texture2D" uid="uid://d2odv8ff6lgrp" path="res://extra/Debug_sprites/aa.png" id="1_onnvs"]
+[ext_resource type="PackedScene" uid="uid://bndt6f8sbqtmn" path="res://Scenes/enimies/damage_area.tscn" id="2_ws687"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7rq2"]
+size = Vector2(64, 56)
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1907524653]
+texture = ExtResource("1_onnvs")
+
+[node name="Damage_area" parent="." unique_id=765659741 instance=ExtResource("2_ws687")]
+cooldown = 0.1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Damage_area" unique_id=50711791]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_j7rq2")
+
+[connection signal="damaged" from="Damage_area" to="." method="_on_damage_area_damaged"]

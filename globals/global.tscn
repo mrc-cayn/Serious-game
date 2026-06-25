@@ -1,6 +1,38 @@
 [gd_scene format=3 uid="uid://ctkkx724gkoga"]
 
 [ext_resource type="Script" uid="uid://7e8s4sx6nj3l" path="res://globals/global.gd" id="1_mqaw6"]
+[ext_resource type="Theme" uid="uid://bkw1ebwdeq47o" path="res://Resources/themes/Default.tres" id="2_lyb5f"]
+
+[sub_resource type="Animation" id="Animation_lyb5f"]
+resource_name = "death"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n6jmf"]
+_data = {
+&"death": SubResource("Animation_lyb5f")
+}
 
 [node name="Global" type="Node" unique_id=1212596302]
 script = ExtResource("1_mqaw6")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=772045375]
+
+[node name="health_bar" type="ProgressBar" parent="HUD" unique_id=937943108]
+offset_left = 8.0
+offset_top = 642.0
+offset_right = 346.0
+offset_bottom = 704.0
+mouse_filter = 2
+theme = ExtResource("2_lyb5f")
+max_value = 3.0
+value = 2.0
+rounded = true
+show_percentage = false
+
+[node name="Label" type="Label" parent="HUD/health_bar" unique_id=1327728869]
+layout_mode = 0
+offset_right = 143.0
+offset_bottom = 78.0
+text = "Health"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1456875900]
+libraries/ = SubResource("AnimationLibrary_n6jmf")

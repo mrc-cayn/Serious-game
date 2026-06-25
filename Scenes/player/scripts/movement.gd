@@ -11,8 +11,11 @@ class_name player_movement
 @onready var cayotee_timer: Timer = $cayotee_timer
 
 @export var walk_speed := 120
+@export var max_up_velocity := 120
 @export var max_non_spin_speed := 2400
 @export var max_falling_velocity := 9000
+@export var non_spin_speed_miltiplier := 50
+@export var spin_speed_miltiplier := 5
 @export var gravity_acceleration := 4000
 @export var gravity_multiplier := 1.5
 @export var max_jump_speed := 2000
@@ -33,11 +36,14 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	_delta = delta
 	handle_walking()
+	
+	_player.velocity.y = max(-max_up_velocity,_player.velocity.y)
+	
 	if Input.is_action_just_pressed("space") and can_jump():
 		jump()
 		pass
 	
-	if _player.is_on_floor() == true:
+	if _player.is_on_floor():
 		has_jumped = false
 	
 	if _player.is_falling and not has_jumped:
@@ -54,22 +60,24 @@ func handle_walking():
 	var input_dir : int = Input.get_axis("left","right")
 	if input_dir != 0 and _player.is_on_floor() and _player.can_move:
 		if not _player.spinning:
-			_player.velocity.x += input_dir * walk_speed * _delta*50
+			_player.moving = true
+			_player.velocity.x += input_dir * walk_speed * _delta \
+			* non_spin_speed_miltiplier
 		else:
-			_player.velocity.x += input_dir * walk_speed * _delta
+			_player.velocity.x += input_dir * walk_speed * _delta \
+			* spin_speed_miltiplier
 	if not _player.spinning:
 		_player.velocity.x = min(_player.velocity.x,max_non_spin_speed)
 		_player.velocity.x = max(_player.velocity.x,-max_non_spin_speed)
-	print(_player.spinning)
 	
-	if _player.spinning == false and _player.is_on_floor() \
+	if not _player.spinning and _player.is_on_floor() \
 	and input_dir == 0:
 		_player.velocity.x = 0
 
 
 func can_jump():
 	if (_player.is_on_floor() or cayotee_timer.time_left > 0.0)\
-	and not has_jumped:
+	and not has_jumped and _player.can_move:
 		return true
 	else:
 		return false
@@ -83,7 +91,7 @@ func jump():
 		has_jumped = true
 		_player.velocity.y -= max_jump_speed *\
 		 (max_jump_time/(jump_timer.time_left+max_jump_time))
-		print(_player.velocity.y )
+		#print(_player.velocity.y )
 
 
 

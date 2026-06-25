@@ -8,11 +8,14 @@ func _ready() -> void:
 		print("scene path is null")
 		return
 	
+	if button_object == null:
+		await get_tree().process_frame
+	
 	if on_release == true:
-		button_object.connect("button_up",change_scene())
+		button_object.button_up.connect(change_scene)
 	
 	elif on_release == false:
-		button_object.connect("button_down",change_scene())
+		button_object.button_down.connect(change_scene)
 	pass # Replace with function body.
 
 func change_scene():

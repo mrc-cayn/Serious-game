@@ -1,11 +1,14 @@
 [gd_resource type="Theme" format=3 uid="uid://sda5jgiceuo0"]
 
-[ext_resource type="FontFile" uid="uid://cduxx7pgwwsq2" path="res://Art/Fonts/BebasNeue-Regular.ttf" id="1_g6a84"]
+[ext_resource type="FontFile" uid="uid://cduxx7pgwwsq2" path="res://Resources/Fonts/BebasNeue-Regular.ttf" id="1_g6a84"]
+[ext_resource type="FontFile" uid="uid://yyqo04hn4qrx" path="res://Resources/Fonts/Almendra/Almendra-BoldItalic.ttf" id="2_bji8i"]
 
 [resource]
-RichTextLabel/colors/default_color = Color(0.9413647, 0.9413647, 0.94136465, 1)
-RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.50980395)
-RichTextLabel/constants/shadow_offset_x = 1
+default_font = ExtResource("2_bji8i")
+default_font_size = 128
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/shadow_offset_x = 21
 RichTextLabel/constants/shadow_offset_y = 1
 RichTextLabel/font_sizes/bold_font_size = 16
 RichTextLabel/font_sizes/normal_font_size = 50

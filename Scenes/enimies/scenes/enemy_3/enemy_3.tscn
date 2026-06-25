@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://baik84vytgcu7"]
+
+[ext_resource type="Script" uid="uid://cvfefi18mbtjq" path="res://Scenes/enimies/scripts/enemy_1/enemy_1.gd" id="1_rm8ti"]
+[ext_resource type="Texture2D" uid="uid://bbqx22ikcrc18" path="res://Scenes/enimies/sprites/ghost/two arm.png" id="2_tujyo"]
+[ext_resource type="PackedScene" uid="uid://bm8gxktq3ajqp" path="res://Scenes/hurtbox.tscn" id="3_46ds6"]
+[ext_resource type="Texture2D" uid="uid://b47yky1wcck3" path="res://Scenes/enimies/sprites/ghost/two arm_n.png" id="3_s0fnn"]
+[ext_resource type="Script" uid="uid://b1llwvhammc1m" path="res://Scenes/enimies/scenes/enemy_2/zombie_attack.gd" id="5_vqmoa"]
+[ext_resource type="PackedScene" uid="uid://bndt6f8sbqtmn" path="res://Scenes/enimies/damage_area.tscn" id="6_jqw1y"]
+[ext_resource type="Script" uid="uid://bahyldnibj6wu" path="res://Scenes/enimies/scripts/ghost_pathfinding.gd" id="6_rm8ti"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_xl1q7"]
+diffuse_texture = ExtResource("2_tujyo")
+normal_texture = ExtResource("3_s0fnn")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_47ub8"]
+radius = 56.0
+height = 224.0
+
+[sub_resource type="Animation" id="Animation_tujyo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5882353)]
+}
+
+[sub_resource type="Animation" id="Animation_44h3j"]
+resource_name = "death"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5882353), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ho4np"]
+_data = {
+&"RESET": SubResource("Animation_tujyo"),
+&"death": SubResource("Animation_44h3j")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jakt0"]
+size = Vector2(49, 58)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j7rq2"]
+radius = 808.6334
+
+[node name="Enemy_3" type="CharacterBody2D" unique_id=457450823 groups=["enemy"]]
+collision_mask = 8
+script = ExtResource("1_rm8ti")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=422950664]
+self_modulate = Color(1, 1, 1, 0.5882353)
+texture = SubResource("CanvasTexture_xl1q7")
+
+[node name="Hurtbox" parent="." unique_id=1180487083 node_paths=PackedStringArray("target") groups=["enemy", "is_hittable"] instance=ExtResource("3_46ds6")]
+target = NodePath("..")
+invunerable_time = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=143665099]
+shape = SubResource("CapsuleShape2D_47ub8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1091800526]
+libraries/ = SubResource("AnimationLibrary_ho4np")
+
+[node name="zombie_attack" type="Node2D" parent="." unique_id=1368733568 node_paths=PackedStringArray("_enemy", "sprite")]
+script = ExtResource("5_vqmoa")
+attack_cooldown = 4.0
+_enemy = NodePath("..")
+sprite = NodePath("../Sprite2D")
+
+[node name="Damage_areaR" parent="zombie_attack" unique_id=765659741 instance=ExtResource("6_jqw1y")]
+position = Vector2(88, 0)
+player_only = true
+cooldown = 4.0
+
+[node name="CollisionR" type="CollisionShape2D" parent="zombie_attack/Damage_areaR" unique_id=73326397]
+position = Vector2(-8.5, 0)
+shape = SubResource("RectangleShape2D_jakt0")
+disabled = true
+
+[node name="Damage_areaL" parent="zombie_attack" unique_id=1669762594 instance=ExtResource("6_jqw1y")]
+position = Vector2(-72, 0)
+player_only = true
+cooldown = 4.0
+
+[node name="CollisionL" type="CollisionShape2D" parent="zombie_attack/Damage_areaL" unique_id=1714374583]
+position = Vector2(-8.5, 0)
+shape = SubResource("RectangleShape2D_jakt0")
+disabled = true
+
+[node name="RayCastL" type="RayCast2D" parent="zombie_attack" unique_id=1388368675]
+target_position = Vector2(-120, 0)
+collision_mask = 4
+
+[node name="RayCastR" type="RayCast2D" parent="zombie_attack" unique_id=95443714]
+target_position = Vector2(120, 0)
+collision_mask = 4
+
+[node name="attack_cooldown" type="Timer" parent="zombie_attack" unique_id=1291089121]
+one_shot = true
+autostart = true
+
+[node name="ghost_pathfinding" type="Node2D" parent="." unique_id=1159178094 node_paths=PackedStringArray("_enemy", "sprite")]
+script = ExtResource("6_rm8ti")
+_enemy = NodePath("..")
+sprite = NodePath("../Sprite2D")
+speed = 50
+social_distance = 720
+
+[node name="eyesight" type="Area2D" parent="ghost_pathfinding" unique_id=1437584224]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ghost_pathfinding/eyesight" unique_id=44569191]
+shape = SubResource("CircleShape2D_j7rq2")
+debug_color = Color(0, 0.7, 0.3733333, 0.21176471)
+
+[node name="idle_timer" type="Timer" parent="ghost_pathfinding" unique_id=80479321]
+one_shot = true
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=520987699]
+shape = SubResource("CapsuleShape2D_47ub8")
+
+[node name="Timer" type="Timer" parent="." unique_id=822591267]
+process_callback = 0
+wait_time = 0.4
+autostart = true
+
+[connection signal="area_entered" from="ghost_pathfinding/eyesight" to="ghost_pathfinding" method="_on_eyesight_area_entered"]
+[connection signal="area_exited" from="ghost_pathfinding/eyesight" to="ghost_pathfinding" method="_on_eyesight_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -20,17 +20,34 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	#print(hammer_loop.speed_scale)
 	if Input.is_action_just_pressed("LMB"):
 		hammer_timer.start()
 	
-	if Input.is_action_pressed("LMB"):
+	
+	if _player.velocity.x > 0:
+		self.scale.x = 1
+	if _player.velocity.x < 0:
+		self.scale.x = -1
+	
+	if _player.moving and not _player.spinning:
+		hammer_loop.play("walk")
+	#
+	#print(not _player.moving ," ", not _player.spinning\
+	#," ",not hammer_loop.current_animation == "idle")
+	
+	
+	if not _player.moving and not _player.spinning\
+	and not hammer_loop.current_animation == "idle":
+		hammer_loop.play("Idle")
+	
+	if Input.is_action_pressed("LMB") and _player.can_move :
 		hammer_loop.get_animation("Spin").loop_mode = \
 		Animation.LOOP_LINEAR
-		
 		hammer_loop.play("Spin")
 		hammer_loop.speed_scale += 2 * delta
 		pass
-	if Input.is_action_just_released("LMB"):
+	if Input.is_action_just_released("LMB") and _player.can_move:
 		#_player.spinning = false
 		_player.hammer_hit_strengh = 1/(1+hammer_timer.time_left)
 		hammer_hit.emit()
@@ -47,7 +64,14 @@ func _process(delta: float) -> void:
 			is_waiting_to_stop = false
 			
 			await get_tree().create_timer(_player.hammer_impact_time).timeout
-			reset_hammer()
+	
+	#print(path_follow.progress_ratio)
+	if not _player.spinning and path_follow.progress_ratio != 0.0:
+		reset_hammer()
+		#print("reset")
+		#if _player.spinning:
+			#trigger_stop_at_mouse()
+	
 	pass
 
 
@@ -58,6 +82,7 @@ func trigger_stop_at_mouse():
 	
 
 func reset_hammer():
+	hammer_loop.speed_scale = 1
 	hammer_loop.play("Spin")
 	
 	#await get_tree().create_timer(
@@ -67,6 +92,4 @@ func reset_hammer():
 	hammer_loop.get_animation("Spin").loop_mode = \
 	Animation.LOOP_NONE
 	await hammer_loop.animation_finished
-	hammer_loop.speed_scale = 1
 	
-	hammer_loop.play("Idle")

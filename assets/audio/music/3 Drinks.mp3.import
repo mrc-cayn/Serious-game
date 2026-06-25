@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://2vfj03wyocku"
+path="res://.godot/imported/3 Drinks.mp3-9ca07ab92b8d5d906a977e61f50450e4.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/3 Drinks.mp3"
+dest_files=["res://.godot/imported/3 Drinks.mp3-9ca07ab92b8d5d906a977e61f50450e4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
