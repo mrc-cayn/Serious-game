@@ -54,7 +54,7 @@ func _on_damage_area_area_entered(area: Area2D) -> void:
 			return
 		if area.is_in_group("enemy") :
 			print(floor(_player.hammer_hit_strengh**2 * 3))
-			area.damage(floor(_player.hammer_hit_strengh** 2 * 3))
+			area.damage(max(1,floor(_player.hammer_hit_strengh** 2 * 3)))
 			hit(-(_player.global_position.direction_to(
 				area.global_position
 			)),false)

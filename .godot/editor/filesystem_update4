@@ -23,3 +23,5 @@ res://Scenes/cutscenes/win_screen.tscn
 res://Scenes/cutscenes/start_cutsccene.tscn
 res://managers/Audio/audio.tscn
 res://managers/Audio/audio.gd
+res://Scenes/enimies/scenes/enemy_1/enemy_1.tscn
+res://Scenes/enimies/scenes/enemy_2/enemy_2.tscn

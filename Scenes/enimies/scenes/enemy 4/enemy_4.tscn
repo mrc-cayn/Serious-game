@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://c8eo5oxjko7ln" path="res://Scenes/enimies/sprites/zombie_knight/arm_L.png" id="17_nr1ah"]
 [ext_resource type="Texture2D" uid="uid://bqc2xutn8gkny" path="res://Scenes/enimies/sprites/zombie_knight/arm_L_n.png" id="18_5vyur"]
 [ext_resource type="Script" uid="uid://bpt68ttma2rwi" path="res://Scenes/enimies/scripts/path_finding.gd" id="19_sahoy"]
+[ext_resource type="Texture2D" uid="uid://qybj8nmo3rbj" path="res://assets/Sprite-0002.png" id="20_fysus"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_47ub8"]
 radius = 56.0
@@ -265,6 +266,18 @@ tracks/19/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("GPUParticles2D2:emitting")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_tfdsp"]
@@ -682,6 +695,18 @@ tracks/13/keys = {
 "update": 0,
 "values": [0.0, 0.7853982]
 }
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("GPUParticles2D2:emitting")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_l44db"]
 resource_name = "walk"
@@ -894,6 +919,15 @@ normal_texture = ExtResource("16_qljjq")
 diffuse_texture = ExtResource("17_nr1ah")
 normal_texture = ExtResource("18_5vyur")
 
+[sub_resource type="Curve" id="Curve_mxxl3"]
+_limits = [-200.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1e-05, 36.324768), 0.0, 0.0, 0, 0, Vector2(0.2945697, 8.974365), 0.0, 0.0, 0, 0, Vector2(1, 12.393158), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_bed5m"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="Enemy_4" type="CharacterBody2D" unique_id=457450823 groups=["enemy"]]
 script = ExtResource("1_jtr0c")
 max_health = 5
@@ -1010,3 +1044,21 @@ collision_mask = 4
 wait_time = 0.2
 one_shot = true
 autostart = true
+
+[node name="GPUParticles2D2" type="CPUParticles2D" parent="." unique_id=977337419]
+modulate = Color(0.41, 0.25966665, 0, 1)
+z_index = -1
+position = Vector2(-8, -46)
+emitting = false
+amount = 24
+texture = ExtResource("20_fysus")
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.8
+fixed_fps = 12
+emission_shape = 3
+emission_rect_extents = Vector2(32, 48)
+radial_accel_min = 40.0
+radial_accel_max = 60.0
+radial_accel_curve = SubResource("Curve_mxxl3")
+scale_amount_curve = SubResource("Curve_bed5m")

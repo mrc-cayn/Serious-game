@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://0kiqr1w5fswu" path="res://Scenes/enimies/sprites/Skeli/leg_L_n.png" id="15_7whqw"]
 [ext_resource type="Texture2D" uid="uid://chv8cmtoj33wb" path="res://Scenes/enimies/sprites/Skeli/arm_L.png" id="16_w4urk"]
 [ext_resource type="Texture2D" uid="uid://ye7engpcj0w1" path="res://Scenes/enimies/sprites/Skeli/arm_L_n.png" id="17_b5cls"]
+[ext_resource type="Texture2D" uid="uid://qybj8nmo3rbj" path="res://assets/Sprite-0002.png" id="19_pka7s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_47ub8"]
 radius = 56.0
@@ -183,6 +184,18 @@ tracks/12/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(-53, 10)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("GPUParticles2D:emitting")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_jqkeq"]
@@ -479,6 +492,18 @@ tracks/11/keys = {
 "update": 0,
 "values": [Vector2(-53, 10), Vector2(-56, 104)]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("GPUParticles2D:emitting")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_7ilge"]
 resource_name = "walk"
@@ -661,6 +686,18 @@ normal_texture = ExtResource("15_7whqw")
 diffuse_texture = ExtResource("16_w4urk")
 normal_texture = ExtResource("17_b5cls")
 
+[sub_resource type="Curve" id="Curve_j7rq2"]
+_limits = [-200.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1e-05, 36.324768), 0.0, 0.0, 0, 0, Vector2(0.2945697, 8.974365), 0.0, 0.0, 0, 0, Vector2(1, 12.393158), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_t7ts0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7ts0"]
+size = Vector2(200, 32)
+
 [node name="Enemy_1" type="CharacterBody2D" unique_id=457450823 groups=["enemy"]]
 z_index = -1
 script = ExtResource("1_47ub8")
@@ -754,3 +791,27 @@ flip_h = true
 [node name="armL" type="Sprite2D" parent="sprite" unique_id=1957536039]
 position = Vector2(-53, 10)
 texture = SubResource("CanvasTexture_y22du")
+
+[node name="GPUParticles2D" type="CPUParticles2D" parent="." unique_id=1186712396]
+modulate = Color(0.88235295, 0.81960785, 0.70980394, 1)
+z_index = -1
+position = Vector2(-8, -46)
+emitting = false
+amount = 12
+texture = ExtResource("19_pka7s")
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.8
+fixed_fps = 12
+emission_shape = 3
+emission_rect_extents = Vector2(32, 48)
+radial_accel_min = 40.0
+radial_accel_max = 60.0
+radial_accel_curve = SubResource("Curve_j7rq2")
+scale_amount_curve = SubResource("Curve_t7ts0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=349328331]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=332234357]
+position = Vector2(4, 128)
+shape = SubResource("RectangleShape2D_t7ts0")
