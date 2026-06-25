@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://culswt7iwuvk6"]
+
+[ext_resource type="Texture2D" uid="uid://dyfpp7lm5r17w" path="res://Scenes/enimies/sprites/Skeli/head.png" id="1_xvuxf"]
+[ext_resource type="Texture2D" uid="uid://d0kby6cq0bht3" path="res://Scenes/enimies/sprites/Skeli/head_n.png" id="2_8mgdl"]
+[ext_resource type="Texture2D" uid="uid://cjxqvw6cgik0n" path="res://assets/Sprite-0003.png" id="3_g484f"]
+[ext_resource type="Texture2D" uid="uid://c7addq1j7b67c" path="res://assets/glow.tres" id="4_uk27b"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_j7rq2"]
+diffuse_texture = ExtResource("1_xvuxf")
+normal_texture = ExtResource("2_8mgdl")
+
+[sub_resource type="Animation" id="Animation_8mgdl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_g484f"]
+resource_name = "loop"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uk27b"]
+_data = {
+&"RESET": SubResource("Animation_8mgdl"),
+&"loop": SubResource("Animation_g484f")
+}
+
+[node name="skull" type="Sprite2D" unique_id=400859612]
+modulate = Color(0.2, 0.2, 0.2, 1)
+texture = SubResource("CanvasTexture_j7rq2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1249545794]
+modulate = Color(0.1, 0.1, 0.1, 1)
+z_index = -100
+position = Vector2(-1.5258789e-05, 0)
+scale = Vector2(2.6354177, 2.2299688)
+texture = ExtResource("3_g484f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1690400570]
+libraries/ = SubResource("AnimationLibrary_uk27b")
+autoplay = &"loop"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1790014441]
+
+[node name="PointLight2D" type="PointLight2D" parent="Node2D" unique_id=920165349]
+position = Vector2(-6.9938224e-06, -40)
+color = Color(0.2166667, 0, 1, 1)
+energy = 4.0
+texture = ExtResource("4_uk27b")

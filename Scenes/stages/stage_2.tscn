@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://bwo8tu1yvxh4f" path="res://Scenes/template/water.tscn" id="8_pknuo"]
 [ext_resource type="PackedScene" uid="uid://c4omtaqsubn5w" path="res://Scenes/template/platform.tscn" id="9_gx4u7"]
 [ext_resource type="Texture2D" uid="uid://bg7voba55hhtd" path="res://extra/Debug_sprites/Sprite-0001.png" id="9_yotly"]
-[ext_resource type="PackedScene" uid="uid://b81xjxhqtby8c" path="res://Scenes/enimies/scenes/totem.tscn" id="10_gx4u7"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pk53f"]
 normal = Vector2(0, 1)
@@ -933,13 +932,14 @@ _data = {
 
 [node name="win" parent="." unique_id=1633950016 instance=ExtResource("1_7gk1y")]
 position = Vector2(22792, -4840)
+target_path = "res://Scenes/stages/stage_3.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="win" unique_id=1093292794]
 position = Vector2(-15856, -1776)
 shape = SubResource("WorldBoundaryShape2D_pk53f")
 
 [node name="Player" parent="." unique_id=1025752439 instance=ExtResource("5_mermm")]
-position = Vector2(-384, 2640)
+position = Vector2(-320, 2456)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=277778633]
 position = Vector2(592, 200)
@@ -1036,9 +1036,6 @@ autoplay = &"new_animation"
 position = Vector2(-88, 2760)
 distance = 960.0
 dir = Vector2(0, -1)
-
-[node name="totem" parent="platforms" unique_id=1064929864 instance=ExtResource("10_gx4u7")]
-position = Vector2(-128, 496)
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="platforms" unique_id=629508252]
 

@@ -22,6 +22,7 @@ var hammer_hit_strengh := 1.0
 
 func _ready() -> void:
 	health = max_health
+	print(health)
 	pass
 
 func _process(delta: float) -> void:
@@ -30,7 +31,7 @@ func _process(delta: float) -> void:
 	
 	if health == 0:
 		G.death = true
-		health = max_health
+		#health = max_health
 	
 	health = max(0,health)
 	##print(hammer_hit_strengh)

@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 	if health == 0 and animation_player.current_animation != "death" :
 		animation_player.play("death")
 		$CollisionShape2D.disabled = true
-		if randi_range(1,4) == 4 and is_on_floor():
+		if randi_range(1,2) == 1 and is_on_floor():
 			spawn_tomen()
 		await animation_player.animation_finished
 		animation_player.pause()

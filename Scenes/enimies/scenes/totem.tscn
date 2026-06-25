@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://spcp5dh2w6f2" path="res://extra/Debug_sprites/Sprite-0003.png" id="2_kxy4m"]
 [ext_resource type="PackedScene" uid="uid://cvgw28rolhu7o" path="res://globals/Dialauge/dialoge_area.tscn" id="4_i6asa"]
 [ext_resource type="PackedScene" uid="uid://bm8gxktq3ajqp" path="res://Scenes/hurtbox.tscn" id="4_usvlf"]
+[ext_resource type="Texture2D" uid="uid://qybj8nmo3rbj" path="res://assets/Sprite-0002.png" id="5_usvlf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j7rq2"]
 radius = 104.0
@@ -11,9 +12,42 @@ radius = 104.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7ts0"]
 size = Vector2(64, 128)
 
+[sub_resource type="Curve" id="Curve_w868m"]
+_data = [Vector2(0, 0.4564733), 0.0, 0.0, 0, 0, Vector2(0.92203605, 0.50111616), -3.2168365, -3.2168365, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_0aug8"]
+curve = SubResource("Curve_w868m")
+
+[sub_resource type="Curve" id="Curve_tcyl0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.73646903, 0.68861616), -1.4741639, -1.4741639, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_oexes"]
+curve = SubResource("Curve_tcyl0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_j7rq2"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(32, 48, 1)
+angle_min = -179.99998
+angle_max = 180.00002
+angular_velocity_min = -180.00002
+angular_velocity_max = 179.99998
+orbit_velocity_min = -0.049999908
+orbit_velocity_max = 0.1500001
+radial_velocity_min = 9.999977
+radial_velocity_max = 9.999977
+gravity = Vector3(0, 49, 0)
+scale_curve = SubResource("CurveTexture_oexes")
+color = Color(0, 0, 1, 1)
+alpha_curve = SubResource("CurveTexture_0aug8")
+hue_variation_min = -0.100000024
+hue_variation_max = 0.09999997
+
 [node name="totem" type="Node2D" unique_id=1064929864]
 script = ExtResource("1_o68yl")
-cooldown = 6.0
+cooldown = 2.0
 possible_messages = Array[String](["you are now breathing manually", "there is a skeleton in you which wants freedom", "it's scary when the [b]abyss stares back ", "You are nothing but an arangement of atoms", "the undead are in [color=Red]agony[/color] ,i beg of you free them", "[tornado]:3", "is it better to be ignorant? to the inevitable", "The princess is a[color=Red][shake] LIE[/shake][/color]", "You are gonna[rainbow] DIe LMAO", "[tornado]boundries are ment to be broken", "The undead start living when they[b] die", "Why don't necromanccers use the skeliton inside people..."])
 
 [node name="Timer" type="Timer" parent="." unique_id=200779639]
@@ -60,6 +94,14 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2043907315]
 shape = SubResource("RectangleShape2D_t7ts0")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=221980455]
+emitting = false
+amount = 24
+texture = ExtResource("5_usvlf")
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_j7rq2")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="intaracted_with" from="Dialoge_area" to="." method="_on_dialoge_area_intaracted_with"]

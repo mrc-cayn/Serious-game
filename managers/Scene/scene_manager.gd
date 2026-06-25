@@ -8,7 +8,7 @@ var current_scene : PackedScene
 func reload_scene():
 	animation_player.play("transition")
 	await  get_tree().create_timer(1).timeout
-	get_tree().reload_current_scene()
+	current_scene_path = get_tree().current_scene.scene_file_path
 
 func change_scene(target_uid : String):
 	current_scene = load(target_uid)
@@ -23,6 +23,4 @@ func update_current_scene():
 
 
 func _process(delta) -> void:
-	if Input.is_action_just_pressed("ui_home"):
-		change_scene("uid://cspyvje8po63w")
-		print(get_tree().current_scene)
+	pass

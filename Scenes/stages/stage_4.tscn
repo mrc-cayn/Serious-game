@@ -898,14 +898,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("stage_4/platforms/AnimationPlayer/StaticBody2D4:position")
+tracks/0/path = NodePath("platforms/AnimationPlayer/StaticBody2D4:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(296, 1728)]
+"values": [Vector2(-88, 2760)]
 }
 
 [sub_resource type="Animation" id="Animation_gx4u7"]
@@ -914,14 +914,14 @@ length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("stage_4/platforms/AnimationPlayer/StaticBody2D4:position")
-tracks/0/interp = 2
+tracks/0/path = NodePath("platforms/AnimationPlayer/StaticBody2D4:position")
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(280, 1728), Vector2(272, -336)]
+"values": [Vector2(-88, 2760), Vector2(-88, 498)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c23em"]
@@ -956,6 +956,7 @@ polygon = PackedVector2Array(-871.21295, 69.76532, -838.3933, 929.1472, -1920, 9
 
 [node name="win" parent="." unique_id=1633950016 instance=ExtResource("11_pcj52")]
 position = Vector2(2040, -5968)
+target_path = "res://Scenes/cutscenes/end_cutscene.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="win" unique_id=158811764]
 position = Vector2(-15856, -1776)
@@ -1181,7 +1182,7 @@ libraries/ = SubResource("AnimationLibrary_c23em")
 autoplay = &"new_animation"
 
 [node name="StaticBody2D4" parent="platforms/AnimationPlayer" unique_id=353611451 instance=ExtResource("12_tsord")]
-position = Vector2(296, 1728)
+position = Vector2(280, 1728)
 distance = 960.0
 dir = Vector2(0, -1)
 

@@ -26,3 +26,14 @@ res://managers/Audio/audio.gd
 res://Scenes/enimies/scenes/enemy_1/enemy_1.tscn
 res://Scenes/enimies/scenes/enemy_2/enemy_2.tscn
 res://globals/Dialauge/dialouge_system.gd
+res://Scenes/deco/torch/torch.tscn
+res://globals/global.gd
+res://managers/Scene/scene_manager.gd
+res://Scenes/enimies/scenes/totem.tscn
+res://Scenes/enimies/scenes/totem.gd
+res://Scenes/deco/skull/skull.tscn
+res://Scenes/template/water.tscn
+res://globals/paused_menu.gd
+res://default_bus_layout.tres
+res://Scenes/Menu's/Main_menu/main_menu.tscn
+res://Resources/enviourment.tres

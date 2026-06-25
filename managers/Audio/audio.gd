@@ -6,7 +6,7 @@ func _ready() -> void:
 	music.play()
 
 func _process(delta: float) -> void:
-	if music.stream == null:
+	if music.stream == null or get_tree().current_scene == null:
 		return
 	if get_tree().current_scene.is_in_group("cutscene") and music.stream.resource_path \
 	!= "res://assets/audio/music/Little Moments.mp3":

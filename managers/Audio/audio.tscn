@@ -10,4 +10,5 @@ script = ExtResource("1_vfehe")
 stream = ExtResource("2_cjge1")
 volume_db = 12.0
 autoplay = true
+bus = &"music"
 parameters/looping = true

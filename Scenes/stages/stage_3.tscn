@@ -894,14 +894,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("stage_4/platforms/AnimationPlayer/StaticBody2D4:position")
+tracks/0/path = NodePath("platforms/AnimationPlayer/StaticBody2D4:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(296, 1728)]
+"values": [Vector2(-88, 2760)]
 }
 
 [sub_resource type="Animation" id="Animation_gx4u7"]
@@ -910,14 +910,14 @@ length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("stage_4/platforms/AnimationPlayer/StaticBody2D4:position")
-tracks/0/interp = 2
+tracks/0/path = NodePath("platforms/AnimationPlayer/StaticBody2D4:position")
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(280, 1728), Vector2(272, -336)]
+"values": [Vector2(-88, 2760), Vector2(-88, 498)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xk5wg"]
@@ -1097,7 +1097,7 @@ position = Vector2(4280, -4936)
 position = Vector2(576, -3992)
 
 [node name="Player" parent="enimies" unique_id=1025752439 instance=ExtResource("5_ghmnv")]
-position = Vector2(-376, 2592)
+position = Vector2(-336, 2136)
 
 [node name="platforms" type="Node" parent="." unique_id=1893386948]
 
@@ -1143,6 +1143,7 @@ dir = Vector2(0, -1)
 
 [node name="win" parent="." unique_id=1633950016 instance=ExtResource("11_xk5wg")]
 position = Vector2(6321, -7408)
+target_path = "res://Scenes/stages/stage_4.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="win" unique_id=1573356743]
 position = Vector2(-15856, -1776)

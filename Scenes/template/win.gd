@@ -1,6 +1,8 @@
 extends Area2D
 
 
+@export var target_path : String
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	G.current_stage = int(get_parent().name.right(1))
@@ -16,11 +18,6 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return
-	if G.current_stage != 4:
-		G.current_stage += 1
-		Scene_manager.change_scene("res://Scenes/stages/stage_"+\
-		str(G.current_stage)+".tscn")
+
+	Scene_manager.change_scene(target_path)
 	
-	else:
-		pass
-	pass # Replace with function body.

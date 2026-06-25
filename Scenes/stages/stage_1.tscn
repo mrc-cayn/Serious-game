@@ -8,6 +8,24 @@
 [ext_resource type="Texture2D" uid="uid://bjd2alpmv75bv" path="res://extra/Screenshot 2026-06-23 081052.png" id="7_jyxen"]
 [ext_resource type="PackedScene" uid="uid://bsean680igajw" path="res://Scenes/template/win.tscn" id="8_61vcd"]
 [ext_resource type="PackedScene" uid="uid://bwo8tu1yvxh4f" path="res://Scenes/template/water.tscn" id="8_ye0jt"]
+[ext_resource type="PackedScene" uid="uid://b8ghur10u1fgb" path="res://Scenes/deco/torch/torch.tscn" id="9_61vcd"]
+[ext_resource type="Environment" uid="uid://ddxdj61kj0qh" path="res://Resources/enviourment.tres" id="9_ek3rb"]
+[ext_resource type="PackedScene" uid="uid://culswt7iwuvk6" path="res://Scenes/deco/skull/skull.tscn" id="11_6bies"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6bies"]
+polygon = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_k1tfo"]
+polygon = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wk170"]
+polygon = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jyxen"]
+polygon = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ye0jt"]
+polygon = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hsfbb"]
 texture = ExtResource("7_jyxen")
@@ -16,11 +34,13 @@ texture_region_size = Vector2i(96, 96)
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
+0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6bies")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 0:0/0/terrains_peering_bit/bottom_side = 0
 1:0/0 = 0
 1:0/0/terrain_set = 0
 1:0/0/terrain = 0
+1:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_k1tfo")
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 1:0/0/terrains_peering_bit/right_side = 0
 1:0/0/terrains_peering_bit/bottom_right_corner = 0
@@ -28,6 +48,7 @@ texture_region_size = Vector2i(96, 96)
 2:0/0 = 0
 2:0/0/terrain_set = 0
 2:0/0/terrain = 0
+2:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_k1tfo")
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 2:0/0/terrains_peering_bit/right_side = 0
 2:0/0/terrains_peering_bit/bottom_right_corner = 0
@@ -37,6 +58,7 @@ texture_region_size = Vector2i(96, 96)
 3:0/0 = 0
 3:0/0/terrain_set = 0
 3:0/0/terrain = 0
+3:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ye0jt")
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 3:0/0/terrains_peering_bit/bottom_side = 0
 3:0/0/terrains_peering_bit/bottom_left_corner = 0
@@ -67,12 +89,14 @@ texture_region_size = Vector2i(96, 96)
 0:1/0 = 0
 0:1/0/terrain_set = 0
 0:1/0/terrain = 0
+0:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6bies")
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 0:1/0/terrains_peering_bit/bottom_side = 0
 0:1/0/terrains_peering_bit/top_side = 0
 1:1/0 = 0
 1:1/0/terrain_set = 0
 1:1/0/terrain = 0
+1:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_wk170")
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 1:1/0/terrains_peering_bit/right_side = 0
 1:1/0/terrains_peering_bit/bottom_right_corner = 0
@@ -82,6 +106,7 @@ texture_region_size = Vector2i(96, 96)
 2:1/0 = 0
 2:1/0/terrain_set = 0
 2:1/0/terrain = 0
+2:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_jyxen")
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 2:1/0/terrains_peering_bit/right_side = 0
 2:1/0/terrains_peering_bit/bottom_right_corner = 0
@@ -94,6 +119,7 @@ texture_region_size = Vector2i(96, 96)
 3:1/0 = 0
 3:1/0/terrain_set = 0
 3:1/0/terrain = 0
+3:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ye0jt")
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 3:1/0/terrains_peering_bit/bottom_side = 0
 3:1/0/terrains_peering_bit/bottom_left_corner = 0
@@ -126,11 +152,13 @@ texture_region_size = Vector2i(96, 96)
 0:2/0 = 0
 0:2/0/terrain_set = 0
 0:2/0/terrain = 0
+0:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6bies")
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 0:2/0/terrains_peering_bit/top_side = 0
 1:2/0 = 0
 1:2/0/terrain_set = 0
 1:2/0/terrain = 0
+1:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_wk170")
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 1:2/0/terrains_peering_bit/right_side = 0
 1:2/0/terrains_peering_bit/top_side = 0
@@ -138,6 +166,7 @@ texture_region_size = Vector2i(96, 96)
 2:2/0 = 0
 2:2/0/terrain_set = 0
 2:2/0/terrain = 0
+2:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_jyxen")
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 2:2/0/terrains_peering_bit/right_side = 0
 2:2/0/terrains_peering_bit/left_side = 0
@@ -147,6 +176,7 @@ texture_region_size = Vector2i(96, 96)
 3:2/0 = 0
 3:2/0/terrain_set = 0
 3:2/0/terrain = 0
+3:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ye0jt")
 3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 3:2/0/terrains_peering_bit/left_side = 0
 3:2/0/terrains_peering_bit/top_left_corner = 0
@@ -177,21 +207,25 @@ texture_region_size = Vector2i(96, 96)
 0:3/0 = 0
 0:3/0/terrain_set = 0
 0:3/0/terrain = 0
+0:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6bies")
 0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 1:3/0 = 0
 1:3/0/terrain_set = 0
 1:3/0/terrain = 0
+1:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6bies")
 1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 1:3/0/terrains_peering_bit/right_side = 0
 2:3/0 = 0
 2:3/0/terrain_set = 0
 2:3/0/terrain = 0
+2:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_wk170")
 2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 2:3/0/terrains_peering_bit/right_side = 0
 2:3/0/terrains_peering_bit/left_side = 0
 3:3/0 = 0
 3:3/0/terrain_set = 0
 3:3/0/terrain = 0
+3:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_jyxen")
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 3:3/0/terrains_peering_bit/left_side = 0
 4:3/0 = 0
@@ -866,10 +900,14 @@ texture_region_size = Vector2i(96, 96)
 25:27/0 = 0
 26:27/0 = 0
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hsfbb"]
+polygon = PackedVector2Array(48, -48, 48, 48, -48, 48)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j6ivk"]
 texture = ExtResource("4_ybtxh")
 texture_region_size = Vector2i(96, 96)
 0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_hsfbb")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(48, -48, 48, 48, -48, 48)
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_1ha7n"]
@@ -877,6 +915,7 @@ scenes/1/scene = ExtResource("8_ye0jt")
 
 [sub_resource type="TileSet" id="TileSet_a0pdm"]
 tile_size = Vector2i(96, 96)
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 3
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
@@ -894,10 +933,18 @@ point_count = 5
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j7rq2"]
 normal = Vector2(0, 1)
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_k1tfo"]
+scenes/1/scene = ExtResource("11_6bies")
+scenes/2/scene = ExtResource("9_61vcd")
+
+[sub_resource type="TileSet" id="TileSet_t7ts0"]
+tile_size = Vector2i(96, 96)
+sources/0 = SubResource("TileSetScenesCollectionSource_k1tfo")
+
 [node name="stage_1" type="Node2D" unique_id=1547785629 groups=["main"]]
 
 [node name="Player" parent="." unique_id=1025752439 instance=ExtResource("5_k1tfo")]
-position = Vector2(408, 344)
+position = Vector2(22584, -3696)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1645176130]
 position = Vector2(592, 200)
@@ -1004,6 +1051,18 @@ dir = Vector2(0, -1)
 
 [node name="win" parent="platforms" unique_id=1633950016 instance=ExtResource("8_61vcd")]
 position = Vector2(22792, -4024)
+target_path = "res://Scenes/stages/stage_2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platforms/win" unique_id=1148676617]
 shape = SubResource("WorldBoundaryShape2D_j7rq2")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=222851183]
+environment = ExtResource("9_ek3rb")
+
+[node name="PointLight2D" parent="." unique_id=626208188 instance=ExtResource("9_61vcd")]
+position = Vector2(616, 344)
+
+[node name="decorations" type="TileMap" parent="." unique_id=232490442]
+tile_set = SubResource("TileSet_t7ts0")
+format = 2
+layer_0/tile_data = PackedInt32Array(196635, 0, 131072, 196640, 0, 131072, 196646, 0, 131072, 196622, 0, 131072, 196656, 0, 65536, -720840, 0, 65536, -458684, 0, 131072, 196708, 0, 131072, 196714, 0, 131072, 852094, 0, 131072, -589667, 0, 131072, -327504, 0, 65536, -196421, 0, 65536, -1703719, 0, 131072, -2555671, 0, 131072, -2555665, 0, 131072, -3211025, 0, 131072, -3211031, 0, 131072, -1244934, 0, 131072, -982814, 0, 131072, -1638169, 0, 131072, -261982, 0, 65536, -786232, 0, 65536, -1572639, 0, 65536, -655172, 0, 65536, 1638550, 0, 65536, 1638555, 0, 65536, 1507453, 0, 65536, -917417, 0, 65536)

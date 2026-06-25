@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://b8ghur10u1fgb"]
+
+[ext_resource type="Texture2D" uid="uid://c7addq1j7b67c" path="res://assets/glow.tres" id="1_h6447"]
+[ext_resource type="Texture2D" uid="uid://cjxqvw6cgik0n" path="res://assets/Sprite-0003.png" id="2_m2kup"]
+[ext_resource type="Texture2D" uid="uid://qybj8nmo3rbj" path="res://assets/Sprite-0002.png" id="3_r05xb"]
+[ext_resource type="Texture2D" uid="uid://spcp5dh2w6f2" path="res://extra/Debug_sprites/Sprite-0003.png" id="4_v4oas"]
+
+[sub_resource type="Curve" id="Curve_v4oas"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.751933, 0.6529019), -1.4604347, -1.4604347, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_r05xb"]
+curve = SubResource("Curve_v4oas")
+
+[sub_resource type="Gradient" id="Gradient_ksp73"]
+colors = PackedColorArray(0.79, 0, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ksp73"]
+gradient = SubResource("Gradient_ksp73")
+
+[sub_resource type="Curve" id="Curve_3owd4"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.66945875, 0.5279018), -1.0825891, -1.0825891, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_m2kup"]
+curve = SubResource("Curve_3owd4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_h6447"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 38.73
+gravity = Vector3(0, -98, 0)
+scale_curve = SubResource("CurveTexture_m2kup")
+color_ramp = SubResource("GradientTexture1D_ksp73")
+alpha_curve = SubResource("CurveTexture_r05xb")
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[node name="torch" type="PointLight2D" unique_id=626208188]
+color = Color(1, 0.59000003, 0.18, 1)
+energy = 8.0
+texture = ExtResource("1_h6447")
+texture_scale = 3.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1198828007]
+modulate = Color(0.1, 0.1, 0.1, 1)
+z_index = -100
+position = Vector2(-8.000076, 19.999962)
+scale = Vector2(18.33333, 17.416666)
+texture = ExtResource("2_m2kup")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1683784788]
+amount = 32
+texture = ExtResource("3_r05xb")
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_h6447")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=385480466]
+modulate = Color(0.05, 0.0039999993, 0.0039999993, 1)
+z_index = -1
+position = Vector2(0, 16)
+scale = Vector2(0.375, 1)
+texture = ExtResource("4_v4oas")

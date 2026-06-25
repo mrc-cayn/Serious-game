@@ -160,7 +160,7 @@ theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 1
 bbcode_enabled = true
 text = "
--Spin attack; Left Click hold down
+-Spin attack; Left Click hold 	                  down to launch
 -Jump: Space
 -Interactions: E
 

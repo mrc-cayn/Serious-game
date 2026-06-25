@@ -3,6 +3,7 @@
 [ext_resource type="Shader" uid="uid://cq2uir8fb0qr5" path="res://Scenes/stages/eater.gdshader" id="1_4q4uq"]
 [ext_resource type="Texture2D" uid="uid://clr3tmhf8efw2" path="res://extra/Debug_sprites/Sprite-0002.png" id="2_1rcji"]
 [ext_resource type="Script" uid="uid://c8agwrvbi3yl1" path="res://Scenes/template/scripts/water.gd" id="3_4q4uq"]
+[ext_resource type="Texture2D" uid="uid://qybj8nmo3rbj" path="res://assets/Sprite-0002.png" id="4_1rcji"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_s3xei"]
 frequency = 0.0067
@@ -35,6 +36,33 @@ shader_parameter/wave_speed = 3.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j7rq2"]
 size = Vector2(32.1857, 17.196316)
 
+[sub_resource type="Curve" id="Curve_3hgkm"]
+_data = [Vector2(0, 0.49218756), 0.0, 0.0, 0, 0, Vector2(0.6539948, 0.795759), 2.598215, 2.598215, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_8i004"]
+curve = SubResource("Curve_3hgkm")
+
+[sub_resource type="CurveTexture" id="CurveTexture_1rcji"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_j7rq2"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(16, 10, 1)
+angle_min = -380.5
+angle_max = 380.50003
+direction = Vector3(-1, 0, 0)
+initial_velocity_min = 12.0
+initial_velocity_max = 12.0
+gravity = Vector3(0, 20, 0)
+linear_accel_curve = SubResource("CurveTexture_1rcji")
+scale_min = 0.5
+scale_max = 1.5
+alpha_curve = SubResource("CurveTexture_8i004")
+hue_variation_min = -0.08000002
+hue_variation_max = 0.079999976
+turbulence_enabled = true
+
 [node name="water" type="Sprite2D" unique_id=1764912329]
 z_index = 2
 material = SubResource("ShaderMaterial_j7rq2")
@@ -52,3 +80,12 @@ max_boyuncy = 2400.0
 position = Vector2(0, 7.4947095)
 scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_j7rq2")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=28001258]
+modulate = Color(0.53999996, 0.9386667, 1, 1)
+position = Vector2(0, 6.068965)
+amount = 4
+texture = ExtResource("4_1rcji")
+lifetime = 5.0
+explosiveness = 0.5
+process_material = SubResource("ParticleProcessMaterial_j7rq2")
