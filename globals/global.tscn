@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bs44f4q2xyly0" path="res://globals/paused_menu.gd" id="3_ly8ta"]
 [ext_resource type="Texture2D" uid="uid://spcp5dh2w6f2" path="res://extra/Debug_sprites/Sprite-0003.png" id="3_n6jmf"]
 [ext_resource type="Texture2D" uid="uid://c7addq1j7b67c" path="res://assets/glow.tres" id="5_ly8ta"]
+[ext_resource type="Environment" uid="uid://ddxdj61kj0qh" path="res://Resources/enviourment.tres" id="7_njoy1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_njoy1"]
 atlas = ExtResource("3_clrof")
@@ -104,6 +105,9 @@ text = "restart"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1456875900]
 libraries/ = SubResource("AnimationLibrary_n6jmf")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1162224496]
+environment = ExtResource("7_njoy1")
 
 [connection signal="popup_hide" from="HUD/paused_menu" to="HUD/paused_menu" method="_on_popup_hide"]
 [connection signal="button_up" from="HUD/paused_menu/restart/restart_button" to="HUD/paused_menu" method="_on_restart_button_button_up"]
