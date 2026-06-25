@@ -25,3 +25,4 @@ res://managers/Audio/audio.tscn
 res://managers/Audio/audio.gd
 res://Scenes/enimies/scenes/enemy_1/enemy_1.tscn
 res://Scenes/enimies/scenes/enemy_2/enemy_2.tscn
+res://globals/Dialauge/dialouge_system.gd

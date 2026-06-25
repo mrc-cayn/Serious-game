@@ -8,8 +8,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if music.stream == null:
 		return
-	print(G.current_stage == 2,not get_tree().current_scene.is_in_group("cutscene"), music.stream.resource_path \
-	!= "res://assets/audio/music/2 Drink.mp3")
 	if get_tree().current_scene.is_in_group("cutscene") and music.stream.resource_path \
 	!= "res://assets/audio/music/Little Moments.mp3":
 		play_music("res://assets/audio/music/Little Moments.mp3")
@@ -37,7 +35,6 @@ func play_music(music_path : String):
 		return
 	var new_music := load(music_path)
 	music_fade(music,0.0,1)
-	print(music_path , new_music)
 	await get_tree().create_timer(1).timeout
 	music.stream = new_music
 	music.play()
