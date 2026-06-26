@@ -741,7 +741,6 @@ sprite = NodePath("../sprite")
 [node name="Damage_areaR" parent="zombie_attack" unique_id=765659741 instance=ExtResource("6_tq7m1")]
 position = Vector2(88, 0)
 player_only = true
-damage = 2
 
 [node name="CollisionR" type="CollisionShape2D" parent="zombie_attack/Damage_areaR" unique_id=73326397]
 position = Vector2(-8.5, 0)
@@ -751,7 +750,6 @@ disabled = true
 [node name="Damage_areaL" parent="zombie_attack" unique_id=1669762594 instance=ExtResource("6_tq7m1")]
 position = Vector2(-72, 0)
 player_only = true
-damage = 2
 
 [node name="CollisionL" type="CollisionShape2D" parent="zombie_attack/Damage_areaL" unique_id=1714374583]
 position = Vector2(-8.5, 0)

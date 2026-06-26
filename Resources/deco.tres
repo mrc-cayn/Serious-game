@@ -1,0 +1,14 @@
+[gd_resource type="TileSet" format=3 uid="uid://bt3edviuubxce"]
+
+[ext_resource type="PackedScene" uid="uid://culswt7iwuvk6" path="res://Scenes/deco/skull/skull.tscn" id="1_h675e"]
+[ext_resource type="PackedScene" uid="uid://b8ghur10u1fgb" path="res://Scenes/deco/torch/torch.tscn" id="2_kemlc"]
+[ext_resource type="PackedScene" uid="uid://dhjsvutfvg3o1" path="res://Scenes/deco/painting/painting.tscn" id="3_ph4qg"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_k1tfo"]
+scenes/1/scene = ExtResource("1_h675e")
+scenes/2/scene = ExtResource("2_kemlc")
+scenes/3/scene = ExtResource("3_ph4qg")
+
+[resource]
+tile_size = Vector2i(96, 96)
+sources/0 = SubResource("TileSetScenesCollectionSource_k1tfo")

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dhjsvutfvg3o1"]
+
+[ext_resource type="Texture2D" uid="uid://bjd2alpmv75bv" path="res://extra/Screenshot 2026-06-23 081052.png" id="1_0anc8"]
+[ext_resource type="Texture2D" uid="uid://dofbpe45pj08j" path="res://Scenes/player/sprites/PENUP_20260622_161343.png" id="2_3oo27"]
+[ext_resource type="Texture2D" uid="uid://djb1gnoog2hmw" path="res://Scenes/enimies/sprites/Xombie/Head.png" id="3_q20ub"]
+[ext_resource type="Texture2D" uid="uid://cjxqvw6cgik0n" path="res://assets/Sprite-0003.png" id="4_q20ub"]
+[ext_resource type="Texture2D" uid="uid://c7addq1j7b67c" path="res://assets/glow.tres" id="5_wj0wh"]
+
+[node name="painting" type="Sprite2D" unique_id=818929291]
+self_modulate = Color(0.31, 0, 0, 1)
+texture = ExtResource("1_0anc8")
+region_enabled = true
+region_rect = Rect2(125, 43, 290, 292)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1729071921]
+modulate = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=146116878]
+position = Vector2(-72.00001, 0)
+scale = Vector2(0.3618157, 0.3618157)
+texture = ExtResource("2_3oo27")
+region_enabled = true
+region_rect = Rect2(0, 706, 455, 644)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D" unique_id=181828674]
+position = Vector2(64, 1.9073486e-06)
+scale = Vector2(0.3618157, 0.3618157)
+texture = ExtResource("2_3oo27")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 706, 455, 644)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D" unique_id=252679923]
+position = Vector2(0, 72)
+rotation = 0.7853982
+texture = ExtResource("3_q20ub")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=490251512]
+modulate = Color(0.1, 0.1, 0.1, 1)
+z_index = -100
+position = Vector2(3.8146973e-06, 3.8146973e-06)
+scale = Vector2(4.666667, 3.6666667)
+texture = ExtResource("4_q20ub")
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite2D" unique_id=807461444]
+scale = Vector2(0.42004317, 0.42004317)
+color = Color(1, 0.48000002, 0.48000002, 1)
+energy = 6.1
+texture = ExtResource("5_wj0wh")

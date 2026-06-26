@@ -1,0 +1,8 @@
+[gd_resource type="CanvasTexture" format=3 uid="uid://bqhwi8ykv25o0"]
+
+[ext_resource type="Texture2D" uid="uid://c26u1t5nhwl4q" path="res://Resources/tilesets/96__Dungeon_Bricks_Plain_scaled_3x_pngcrushed.png" id="1_k0q7v"]
+[ext_resource type="Texture2D" uid="uid://cxq6j7i76ldp2" path="res://Resources/tilesets/96__Dungeon_Bricks_Plain_scaled_3x_pngcrushed_n.png" id="2_kjqbl"]
+
+[resource]
+diffuse_texture = ExtResource("1_k0q7v")
+normal_texture = ExtResource("2_kjqbl")

@@ -3,16 +3,12 @@
 [ext_resource type="Theme" uid="uid://sda5jgiceuo0" path="res://Resources/themes/GameTheme.tres" id="1_ollly"]
 [ext_resource type="PackedScene" uid="uid://bb115iag1vle2" path="res://Scenes/template/UI/button_to.tscn" id="2_vbkdf"]
 [ext_resource type="Theme" uid="uid://bkw1ebwdeq47o" path="res://Resources/themes/Default.tres" id="3_71hdd"]
-[ext_resource type="Texture2D" uid="uid://bjd2alpmv75bv" path="res://extra/Screenshot 2026-06-23 081052.png" id="4_e8hy2"]
 [ext_resource type="Texture2D" uid="uid://spcp5dh2w6f2" path="res://extra/Debug_sprites/Sprite-0003.png" id="5_g4g8o"]
 [ext_resource type="Texture2D" uid="uid://c7addq1j7b67c" path="res://assets/glow.tres" id="6_ycs4l"]
 [ext_resource type="Script" uid="uid://vdo3k7wpo326" path="res://Scenes/Menu's/Main_menu/how_to_play.gd" id="7_7dqdx"]
 [ext_resource type="FontFile" uid="uid://cduxx7pgwwsq2" path="res://Resources/Fonts/BebasNeue-Regular.ttf" id="8_fd5jd"]
+[ext_resource type="Texture2D" uid="uid://bqhwi8ykv25o0" path="res://Resources/ui.tres" id="8_htjxr"]
 [ext_resource type="FontFile" uid="uid://yyqo04hn4qrx" path="res://Resources/Fonts/Almendra/Almendra-BoldItalic.ttf" id="9_htjxr"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j7rq2"]
-atlas = ExtResource("4_e8hy2")
-region = Rect2(124, 43, 292, 292)
 
 [sub_resource type="Theme" id="Theme_myoe7"]
 default_font = ExtResource("9_htjxr")
@@ -51,11 +47,11 @@ on_release = true
 [node name="NinePatchRect" type="NinePatchRect" parent="ButtonTo" unique_id=369784961]
 layout_mode = 0
 offset_left = -144.0
-offset_top = -80.0
+offset_top = -64.0
 offset_right = 640.0
-offset_bottom = 160.0
+offset_bottom = 130.0
 scale = Vector2(0.5, 0.5)
-texture = SubResource("AtlasTexture_j7rq2")
+texture = ExtResource("8_htjxr")
 region_rect = Rect2(0, 0, 292, 292)
 patch_margin_left = 97
 patch_margin_top = 97
@@ -102,11 +98,11 @@ script = ExtResource("7_7dqdx")
 [node name="NinePatchRect" type="NinePatchRect" parent="how_to_play" unique_id=333396177]
 layout_mode = 0
 offset_left = -144.0
-offset_top = -64.0
+offset_top = -48.0
 offset_right = 640.0
-offset_bottom = 192.0
+offset_bottom = 146.0
 scale = Vector2(0.5, 0.5)
-texture = SubResource("AtlasTexture_j7rq2")
+texture = ExtResource("8_htjxr")
 region_rect = Rect2(0, 0, 292, 292)
 patch_margin_left = 97
 patch_margin_top = 97

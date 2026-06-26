@@ -2,15 +2,11 @@
 
 [ext_resource type="Script" uid="uid://7e8s4sx6nj3l" path="res://globals/global.gd" id="1_mqaw6"]
 [ext_resource type="Theme" uid="uid://bkw1ebwdeq47o" path="res://Resources/themes/Default.tres" id="2_lyb5f"]
-[ext_resource type="Texture2D" uid="uid://bjd2alpmv75bv" path="res://extra/Screenshot 2026-06-23 081052.png" id="3_clrof"]
 [ext_resource type="Script" uid="uid://bs44f4q2xyly0" path="res://globals/paused_menu.gd" id="3_ly8ta"]
 [ext_resource type="Texture2D" uid="uid://spcp5dh2w6f2" path="res://extra/Debug_sprites/Sprite-0003.png" id="3_n6jmf"]
+[ext_resource type="Texture2D" uid="uid://bqhwi8ykv25o0" path="res://Resources/ui.tres" id="4_njoy1"]
 [ext_resource type="Texture2D" uid="uid://c7addq1j7b67c" path="res://assets/glow.tres" id="5_ly8ta"]
 [ext_resource type="Environment" uid="uid://ddxdj61kj0qh" path="res://Resources/enviourment.tres" id="7_njoy1"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_njoy1"]
-atlas = ExtResource("3_clrof")
-region = Rect2(124, 43, 292, 292)
 
 [sub_resource type="Animation" id="Animation_lyb5f"]
 resource_name = "death"
@@ -72,7 +68,7 @@ offset_top = 308.0
 offset_right = 476.0
 offset_bottom = 502.0
 scale = Vector2(0.5, 0.5)
-texture = SubResource("AtlasTexture_njoy1")
+texture = ExtResource("4_njoy1")
 region_rect = Rect2(0, 0, 292, 292)
 patch_margin_left = 97
 patch_margin_top = 97
